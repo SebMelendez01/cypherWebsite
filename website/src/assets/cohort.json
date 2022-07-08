@@ -1,0 +1,112 @@
+{
+    "Cowboy Labs" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "Cowboy Labs is a SaaS and product partnership company offering tools & services to make blockchain easy & scalable. Shifting from NFT consulting services to SaaS tooling, Cowboy Labs is primed to take the web3 world by storm.",
+        "website" : "cowboylabs.xyz",
+        "tags" : [
+            "NFT",
+            "SaaS"
+        ]
+    },
+    "Protego" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    },
+    "Roofstock" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    }, 
+    "VIA" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    }, 
+    "Carv" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    },
+    "VO2" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    }, 
+    "Ensuro" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    }, 
+    "Portabl" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    }, 
+    "TYDEi" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    },
+    "Metaverse AI" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "logo" : "example.com",
+        "description" : "This is a description.",
+        "website" : "example.com",
+        "tags" : [
+            "",
+            ""
+        ]
+    }
+}
