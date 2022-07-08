@@ -14,12 +14,25 @@ p {
 .title {
     position: relative;
     text-align: right;
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
-.quotes {
-    padding-left: 10%;
+.flex-container {
+    display: flex;
+    margin-right: 5%;
+    margin-left: 5%;
 }
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-top: -5%;
+} 
+
+
+
 div.card {
     padding-top: 5%;
     padding-left: 1%;
@@ -54,3 +67,9 @@ p.card-text {
     padding-top: 5%;
 }
 
+
+/* map */
+/* img {
+    width: 50%;
+    height: auto;
+} */
