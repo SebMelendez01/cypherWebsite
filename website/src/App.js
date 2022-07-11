@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Cohort from './components/Cohort'
+import Cohort from './components/Cohort';
+import Footer from './components/Footer';
+import Partners from './components/Partners';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         </a>
       </header> */}
       <Cohort/>
+      <Partners/>
+      <Footer/>
     </div>
   );
 }

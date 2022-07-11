@@ -4,10 +4,16 @@ import './Component.css';
 const Map = () => {
   // It’s safe to re-create the map at each render, because of the
   // pre-computation it’s super fast ⚡️
-  const map = new DottedMap({ height: 50, grid: "vertical" });
+  const map = new DottedMap({ height: 60, grid: "vertical" });
+  
+  map.addPin({
+    lat: 40.73061,
+    lng: -73.935242,
+    svgOptions: { color: "#FA3667", radius: 0.5 }
+  });
 
   const svgMap = map.getSVG({
-    radius: 0.3,
+    radius: 0.35,
     color: "#000000",
     shape: "circle",
     backgroundColor: "#FFFFFF"

@@ -1,112 +1,102 @@
 {
     "Cowboy Labs" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/",
+        "Twitter" : "https://twitter.com/CowboyLabs",
+        "logo" : "Cowboy_Labs",
         "description" : "Cowboy Labs is a SaaS and product partnership company offering tools & services to make blockchain easy & scalable. Shifting from NFT consulting services to SaaS tooling, Cowboy Labs is primed to take the web3 world by storm.",
         "website" : "cowboylabs.xyz",
         "tags" : [
-            "NFT",
             "SaaS"
         ]
     },
     "Protego" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/",
+        "Twitter" : "https://twitter.com/",
+        "logo" : "Protego",
+        "description" : "A decentralized trust & safety protocol to assess the risk of any interaction on any blockchain.",
+        "website" : "google.com",
         "tags" : [
-            "",
-            ""
+            "Security"
         ]
     },
     "Roofstock" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/company/roofstock/",
+        "Twitter" : "https://twitter.com/rsonchain",
+        "logo" : "Roofstock",
+        "description" : "Radically simplifying single family rental investments.",
+        "website" : "https://www.roofstock.com/",
         "tags" : [
-            "",
-            ""
+            "Real Estate"
         ]
     }, 
     "VIA" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/",
+        "Twitter" : "https://twitter.com/solvewithvia",
+        "logo" : "VIA",
+        "description" : "Making communities cleaner and safer by bringing AI everywhere.",
+        "website" : "https://www.solvewithvia.com/",
         "tags" : [
-            "",
-            ""
+            "Energy"
         ]
     }, 
     "Carv" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/",
+        "Twitter" : "https://twitter.com/carv_official",
+        "logo" : "Carv",
+        "description" : "Building a credential issuing protocol for web3 gaming citizens, enabling credential-driven benefits and interoperability across the gaming metaverse.",
+        "website" : "https://carv.io/",
         "tags" : [
-            "",
-            ""
+            "DID"
         ]
     },
     "VO2" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/company/vo-two/",
+        "Twitter" : "https://twitter.com/VO2_fans",
+        "logo" : "VO2",
+        "description" : "Be more than a fan.",
+        "website" : "https://www.vo2.fans/",
         "tags" : [
-            "",
-            ""
+            "Sports"
         ]
     }, 
     "Ensuro" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/company/ensuro/",
+        "Twitter" : "https://twitter.com/Ensuroproject",
+        "logo" : "Ensuro",
+        "description" : "A decentralized capital provider for insurance risk.",
+        "website" : "https://ensuro.co/",
         "tags" : [
-            "",
-            ""
+            "Insurance"
         ]
     }, 
     "Portabl" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/company/getportabl/",
+        "Twitter" : "https://twitter.com/getportabl",
+        "logo" : "Portabl",
+        "description" : "Universal financial identity for all.",
+        "website" : "https://portabl.io/",
         "tags" : [
-            "",
-            ""
+            "Identity"
         ]
     }, 
     "TYDEi" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/company/tydeihealth/",
+        "Twitter" : "https://twitter.com/tydeihealth",
+        "logo" : "TYDEi",
+        "description" : "Solving complex business problems in healthcare through our low-code, smart contract-enabled service platform.",
+        "website" : "https://tydei.io/",
         "tags" : [
-            "",
-            ""
+            "Healthcare"
         ]
     },
     "Metaverse AI" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "logo" : "example.com",
-        "description" : "This is a description.",
-        "website" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/",
+        "Twitter" : "https://twitter.com/metaverseOrg",
+        "logo" : "Metaverse_AI",
+        "description" : "Building the open metaverse with AI-powered virtual humans, digital celebrities & web3 applications.",
+        "website" : "https://www.metaverseai.org/",
         "tags" : [
-            "",
-            ""
+            "Metaverse"
         ]
     }
 }
