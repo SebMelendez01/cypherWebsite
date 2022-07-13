@@ -1,0 +1,20 @@
+[
+    {
+        "name" : "Lorenzo Melendez",
+        "title" : "CEO, Cowboy Labs",
+        "quote" : "'It was great to see that others love the things we love to create.'",
+        "image" : "https://pbs.twimg.com/profile_images/1536722284647415811/bVRSaIK-_400x400.jpg"
+    },
+    {
+        "name" : "Sebastian",
+        "title" : "Cypher", 
+        "quote" : "'lets code'",
+        "image" : "https://pbs.twimg.com/profile_images/1536722284647415811/bVRSaIK-_400x400.jpg"
+    },
+    {
+        "name" : "Shiva",
+        "title" : "Cypher Manager",
+        "quote" : "'Cypher is fun'",
+        "image" : "https://pbs.twimg.com/profile_images/1471137641550606338/zbnig-Xr_400x400.jpg"
+    }
+]

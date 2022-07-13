@@ -1,5 +1,9 @@
 import DottedMap from "dotted-map";
 import './Component.css';
+import React from "react";
+
+
+
 
 const Map = () => {
   // It’s safe to re-create the map at each render, because of the
@@ -19,12 +23,13 @@ const Map = () => {
     backgroundColor: "#FFFFFF"
   });
 //   https://www.react-simple-maps.io/examples/
+
   return (
     <div>
       <img
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        alt=""
-      />
+          src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
+          alt=""
+        />              
     </div>
   );
 };

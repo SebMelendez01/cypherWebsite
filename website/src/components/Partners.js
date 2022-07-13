@@ -14,15 +14,15 @@ function Partners() {
       <h2> <b>Corportate Partners</b></h2>
       <Container>
         <Row>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/aws.png')} alt=''/></Col>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/quicknode.png')} alt=''/></Col>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/bcg.png')} alt=''/></Col>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/money2020.png')} alt=''/></Col>
+          <Col><a href='https://aws.amazon.com/'><img className='partner-logo' height="60" src={require('../assets/images/partners/aws.png')} alt=''/></a></Col>
+          <Col><a href='https://www.quicknode.com/'><img className='partner-logo' height="60" src={require('../assets/images/partners/quicknode.png')} alt=''/></a></Col>
+          <Col><a href='https://www.bcg.com/'><img className='partner-logo' height="60" src={require('../assets/images/partners/bcg.png')} alt=''/></a></Col>
+          <Col><a href='https://www.money2020.com/'><img className='partner-logo' height="60" src={require('../assets/images/partners/money2020.png')} alt=''/></a></Col>
         </Row>
         <Row>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/near.png')} alt=''/></Col>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/securitize.png')} alt=''/></Col>
-          <Col><img className='partner-logo' height="60" src={require('../assets/images/partners/polygon.png')} alt=''/></Col>
+          <Col><a href='https://near.org/'><img className='partner-logo' height="60" src={require('../assets/images/partners/near.png')} alt=''/></a></Col>
+          <Col><a href='https://securitize.io/'><img className='partner-logo' height="60" src={require('../assets/images/partners/securitize.png')} alt=''/></a></Col>
+          <Col><a href='https://polygon.technology/'><img className='partner-logo' height="60" src={require('../assets/images/partners/polygon.png')} alt=''/></a></Col>
         </Row>
       </Container>
     </div>
