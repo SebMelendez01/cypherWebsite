@@ -6,6 +6,7 @@ import Badge from 'react-bootstrap/Badge'
 import Modal from 'react-bootstrap/Modal'
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import './SEBComponent.css';
 
 import cohort from '../assets/cohort.json'
 

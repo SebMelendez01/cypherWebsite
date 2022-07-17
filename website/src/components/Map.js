@@ -1,12 +1,8 @@
 import DottedMap from "dotted-map";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-
 import Tooltip from 'react-bootstrap/Tooltip'
-import './Component.css';
+import './SEBComponent.css';
 import React from "react";
-
-import cohort from '../assets/cohort.json';
-
 
 const Map = () => {
 
@@ -105,20 +101,3 @@ const Map = () => {
 };
 
 export default Map;
-
-
-// {/* <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/World_map_with_points.svg" alt="Kiwi standing on oval"></img> */}
-//       {/* <svg width="100" height="100">
-//         <circle cx="50" cy="50" r="40" stroke="green" strokeWidth="4" fill="yellow" />
-//       </svg> */}
-//       {/* <img
-//           src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-//           alt=""
-//           onClick={() => console.log("hello")}
-//         /> */}
-//       {/* <OverlayTrigger
-//           placement="right"
-//           delay={{ show: 250, hide: 400 }}
-//           overlay={renderTooltip}
-//         >
-//       </OverlayTrigger> */}

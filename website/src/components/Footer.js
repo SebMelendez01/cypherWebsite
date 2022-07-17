@@ -1,11 +1,7 @@
 import { React } from 'react';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import { FaTwitterSquare, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
-
+import './SEBComponent.css';
 
 
 function Footer() {

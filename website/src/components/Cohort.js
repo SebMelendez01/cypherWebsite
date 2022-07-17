@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
+import './SEBComponent.css';
 
 import quotes from '../assets/quotes.json'
 
