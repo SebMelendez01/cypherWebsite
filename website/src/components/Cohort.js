@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card'
 import Map from './Map'
 import Company from './Company'
@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Component.css';
 
@@ -92,26 +93,6 @@ function Cohort() {
             </Col>
           </Row>
         </div>
-        {/* <Row md={4}>
-          <Col>
-            <Company name='Cowboy Labs'/>
-            <Company name='Protego'/>
-            <Company name='Roofstock'/>
-          </Col>
-          <Col>
-            <Company name='Carv'/>
-            <Company name='VO2'/>
-            <Company name='Ensuro'/>
-          </Col>
-          <Col>
-            <Company name='VIA'/>
-            <Company name='TYDEi'/>
-          </Col>
-          <Col>
-            <Company name='Portabl'/>
-            <Company name='Metaverse AI'/>
-          </Col>
-        </Row> */}
       </Container>
     </div>
   );

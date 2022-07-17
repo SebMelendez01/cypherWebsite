@@ -1,11 +1,12 @@
 import Card from 'react-bootstrap/Card';
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from 'react';
 import { FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
 import { TbWorld } from 'react-icons/tb'
 import Badge from 'react-bootstrap/Badge'
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import cohort from '../assets/cohort.json'
 
 // https://react-bootstrap.github.io/components/modal/
@@ -43,7 +44,7 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-function Company(props) {
+export default function Company(props) {
   const [modalShow, setModalShow] = useState(false);
   const name = props.name;
   const data = cohort;
@@ -67,7 +68,7 @@ function Company(props) {
             </div>
             <div className='flex-child' id='company-info'>
               <Card.Title><b>{name}</b></Card.Title>
-              <div className='flex-container' id='ghjk'>
+              <div className='flex-container'>
                 <div className='flex-child' id='tags'>
                   <div>{tags}</div>            
                 </div>
@@ -93,6 +94,6 @@ function Company(props) {
   );
 }
   
-export default Company;
+export {Company, MyVerticallyCenteredModal};
 
   
