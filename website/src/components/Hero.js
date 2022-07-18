@@ -1,7 +1,7 @@
 import React from 'react';
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
+// import './Component.css';
 import whartonHeroLogo from '../assets/images/wharton-logo-white.png'
 import stevensHeroLogo from '../assets/images/stevens-logo-white.png'
 

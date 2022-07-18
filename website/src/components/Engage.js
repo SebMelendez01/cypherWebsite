@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import './Component.css';
+// import './Component.css';
 import Card from 'react-bootstrap/Card';
 
 class Engage extends React.Component {

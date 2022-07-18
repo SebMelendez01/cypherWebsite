@@ -1,0 +1,410 @@
+/* div {
+    font-family: 'Metropolis';
+}
+
+p {
+    font-family: 'Proxima Nova';
+}
+
+.subtitle {
+    font-size: 75px;
+}
+
+.title {
+    text-align: right;
+}
+
+.flex-container {
+    display: flex;
+    width:100%;
+}
+
+.flex-child#cohort {
+    flex: 1;
+}  
+
+.cohort {
+    padding: 5%;
+}
+
+
+
+.quotes div.card {
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    outline: 2px solid black;
+    width: 555px;
+    height: 321px;
+    border-radius: 6px;
+    box-shadow: 10px 10px;
+}
+
+.quotes div.card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: right;
+}
+
+.quotes div.card-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+}
+
+.quotes p.card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 5%;
+}
+
+.card-content {
+    flex: 1;
+    flex-direction: 'row';
+    align-items:'center';
+    justify-content:'center';
+}
+
+
+.company {
+    margin: 20%;
+}
+
+.company-card {
+    width: 300px;
+    outline: 2px solid black;
+    box-shadow: 10px 10px;
+}
+
+.flex-child#logo {
+    width: 30%;
+    background-color: aliceblue;
+    white-space: nowrap;
+    margin: 1em 0;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.flex-child#logo img{
+    vertical-align: middle;
+}
+
+.flex-child#info {
+    width: 70%;
+    background-color:aqua;
+}
+
+.tag {
+    background-color: bisque;
+    border-radius: 15px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: underline;
+    cursor: auto;
+}
+  
+a:link:active, a:visited:active {
+    color: black;
+}
+
+h2 {
+    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.partners {
+    background: #222222;
+}
+
+.partner-logo {
+    opacity: 0.5;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+ */
+
+
+
+.flex-container {
+    display: flex;
+    width:100%;
+}
+
+.flex-child {
+    flex-direction: 'row';
+}
+
+/* Intro Genesis Cohort Section */
+.cohort {
+    margin: 5%;
+}
+
+.card-body#quote-body {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.flex-child#intro-right, .flex-child#card-right  {
+    width: 60%;
+    margin-left: auto; 
+    margin-right: 0;   
+    text-align: right; 
+}
+
+.flex-child#card-right {
+    align-self: flex-end;
+}
+.flex-child#card-right > .card-title {
+    font-size: 1.5vw;
+}
+.flex-child#card-right > .card-subtitle {
+    font-size: 1.25vw;
+}
+
+p#subtitle-top {
+    font-size: 1vw;
+}
+
+h1#subtitle-bottom {
+    font-size: 6vw;
+}
+
+#quote-card {
+    width: 35%;
+    margin-top: 10%;
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+#quote-card > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.background-box {
+    height: 50%;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background: linear-gradient(71.24deg, #00A6FC 0%, #DD7CFF 98.86%);;
+    z-index: 1;
+}
+
+#quote-card > .card {
+    height: 50%;
+    outline: 2px solid black;
+    z-index: 2;
+}
+
+.card-text#quote-text {
+    margin-top: 7.5%;
+    font-size: 1.5vw;
+}
+
+.flex-child#card-left > img{
+    width: 7vw;
+}
+
+.map {
+    text-align: center;
+}
+
+/* Company Grid */
+.company {
+    margin-top: 10%;
+}
+
+.cohort-grid {
+    margin-top: -10%;
+}
+
+/* Company Cards */
+.company-card {
+    outline: 2px solid black;
+    box-shadow: 7.5px 7.5px;
+    margin-right: 5%;
+    margin-left: 10%;
+}
+
+.company-card:hover {
+    top: 7.5px;
+    left: 7.5px;
+    box-shadow: 0px 0px;
+}
+
+.flex-child#company-logo > img{
+    width:90%;
+    background-color: black;
+    border-radius: 5%;
+}
+
+#company-info {
+    margin-left: 5%;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.flex-child#company-logo {
+    width: 30%;
+    vertical-align: middle;
+}
+
+.flex-child#company-info .card-title{
+    text-align: left;
+    font-size: 1.25vw;
+}
+
+
+.flex-child#company-links a svg{
+    color: black;
+    width: 40%;
+    margin: 5%;
+    /* align-content: flex-end; */
+    
+}
+
+#tags > div > span {
+    font-size: .75vw;
+}
+
+/* Popup Company Description */
+.flex-child#popup-modal {
+    /* background-color: #222222; */
+    width: 60%;
+}
+
+.model-title {
+    padding-right: 10%;
+}
+
+#popup-modal > div.modal-header > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+.flex-child#popup-img {
+    width: 40%;
+    vertical-align: middle;
+}
+.flex-child#popup-img > img{
+    width: 90%;
+    margin: 5%;
+    border-radius: 5px;
+    background-color: black;
+}
+
+#popup-modal > div.modal-footer > a {
+    color: black;
+}
+
+#popup-modal > div.modal-body > p {
+    font-size: 90%;
+}
+
+#popup-modal > div.modal-body > p {
+    /* color: white; */
+    font-size: .75vw;
+}
+
+
+/* Corporate Partners Section */
+.partners {
+    background: #222222;
+}
+
+.partner-logo {
+    opacity: 0.5;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.partners > h2 {
+    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.partners {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.partners > div > div:nth-child(1) {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.partners > div > div:nth-child(2) {
+    padding-top: 2.5%;
+}
+
+/* Footer Section */
+.footer {
+    background-color: black;
+    color: white;
+    /* padding: 1%; */
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.footer > div > div:nth-child(2) > a {
+    color: white;
+    vertical-align: middle;
+}
+
+.flex-child#footer-left {
+    text-align: left;
+    width: 50%;
+}
+.flex-child#footer-right {
+    text-align: right;
+    width: 50%;
+}
+
+#footer-right > a:nth-child(6) {
+    padding-right: 2.5%;
+}
+#footer-right > svg:nth-child(7) {
+    margin-right: 1%;
+}
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
+// import './Component.css';
 
 class Information extends React.Component {
     render () {

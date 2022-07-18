@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import cypherNavbarLogo from '../assets/images/cypher-logo-white.png'
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import './Component.css';
+// import './Component.css';
 
 function Navibar() {
     const [colorState, setColorState] = useState(false);
