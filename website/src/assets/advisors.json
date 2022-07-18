@@ -1,0 +1,80 @@
+{
+    "Jeff Amico" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Partner, Andreessen Horowitz",
+        "Image" : ""
+    },
+    "Charles Birnbaum" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Partner, Bessemer Venture Partners",
+        "Image" : ""
+    },
+    "Stefan Cohen" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Partner, Bain Capital",
+        "Image" : ""
+    },
+    "Mark Cuban" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Chairman, Cuban Companies",
+        "Image" : ""
+    },
+    "Tim Draper" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Chairman, Draper Associates",
+        "Image" : ""
+    },
+    "Amias Gerety" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Partner, QED Investors",
+        "Image" : ""
+    },
+    "Chris Giancarlo" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Senior Counsel, Wilkie Farr & Gallagher and Former CFTC Chair",
+        "Image" : ""
+    },
+    "Nick Grossman" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Partner, Union Square Ventures",
+        "Image" : ""
+    },
+    "Joe Guagliardo" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Technology and Blockchain Partner, Dentons",
+        "Image" : ""
+    },
+    "Sameer Gupta" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Data Solutions, Point72 and New York Mets",
+        "Image" : ""
+    },
+    "Joshua Klayman" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Global Tech Sector Co-Head and Head of Blockchain, Linklaters",
+        "Image" : ""
+    },
+    "Joey Krug" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Co-Chief Investment Officer, Pantera Capital",
+        "Image" : ""
+    },
+    "Paul Veradittakit" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Partner, Pantera Capital",
+        "Image" : ""
+    }
+}

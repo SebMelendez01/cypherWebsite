@@ -6,8 +6,328 @@ p {
     font-family: 'Proxima Nova';
 }
 
-.subtitle {
+
+/* Buttons CSS */
+
+button {
+    border-color: black;
+    border-width: 1.5px;
+    padding: 5px;
+    width: 150px;
+    font-weight: 450;
+    position: relative;
+}
+
+.black-button {
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.white-button {
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    border-radius: 5px;
+
+}
+
+.gradient-button {
+    background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%);
+    color: black;
+    border-radius: 6px;
+}
+
+.gradient-button-2 {
+    background: linear-gradient(85.58deg, #00A6FC 1.29%, #DD7CFF 74.66%);
+    border: 3px solid #000000;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+}
+
+.gradient-button-2::after {
+    position: absolute;
+    background-color: rgba(49, 54, 57, 0.5);
+
+    left: 0;
+    top: 0%;
+    height: 100%;
+    content: "";
+    width: 100%;
+    display: block;
+}
+
+/* Navigation Bar CSS */
+
+.nav-bar {
+    font-family: 'Proxima Nova';
+    font-weight: 500;
+    font-size: 24px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    z-index: 9999;
+    transition: top 0.3s;
+    animation-timing-function: linear;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-bar-scroll {
+    font-family: 'Proxima Nova';
+    font-weight: 500;
+    font-size: 24px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    z-index: 9999;
+    transition: top 0.3s;
+    animation-timing-function: linear;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-guides {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-guides .gradient-button {
+    width: 100px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.nav-link {
+    color: white !important;
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Hero Section CSS */
+
+.text {
     font-size: 75px;
+    line-height: 90px;
+    font-weight: 550;
+    color: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroLogos {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    height: 10vh;
+}
+
+.heroText {
+    background-image: url("../assets/images/hero-background-image.png");
+    background-size:100%;
+    text-align: right;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    gap: 20px;
+    height: 90vh;
+}
+
+.hero-logo-image {
+    height: 40px;
+}
+
+.engage-button {
+    text-align: right;
+}
+
+.description {
+    font-size: 25px;
+    color: #E8E8E8;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.links {
+    display: flex;
+}
+
+/* Information Section CSS */
+
+.information {
+    text-align: left;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10vh;
+}
+
+.subtext {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba(34, 34, 34, 0.66);
+}
+
+.bcf-card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw;
+    padding-bottom: 15vh;
+}
+
+.bcf-card .card {
+    background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
+    outline: 1px solid #000000;
+    border-radius: 6px;
+    width: 225px;
+    padding-bottom: 5px;
+}
+
+.bcf-card .card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.bcf-card .card-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+/* Engage Section CSS */
+.engage-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.engage-container::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    background: #ededed;
+    content: "";
+    width: 100%;
+    display: block;
+    border-top: 4px solid black;
+    z-index: 0;
+}
+
+.engage-container .card {
+}
+
+.engage-container .card-title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.engage-container .card-text {
+    text-align: center;
+    font-size: 24px;
+}
+
+.engage-container .get-involved .card {
+    background: linear-gradient(146.6deg, #00A6FC 0%, #DD7CFF 76.96%);
+    border: 4px solid #000000;
+    border-radius: 9px;
+
+    color: rgba(0, 0, 0, 0.68);
+    width: 30vw;
+}
+
+.engage-container .apply .card {
+    border: 4px solid #FFFFFF;
+    border-radius: 9px;
+    background-color: black;
+    color: #F5F4F1;
+    width: 50vw;
+}
+
+/* Team Section CSS */
+.team {
+    text-align: left;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10vh;
+    background-color: #ededed;
+}
+
+.team .subtitle {
+    text-align: right;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+
+    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Team Section CSS */
+.team .card {
+    width: 15vw;
+    height: 15vw;
+    font-family: 'Proxima Nova';
+    border: 2px solid black;
+}
+
+.team .card-title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.team .card-img {
+    height: 5vh;
+    width: 5vh;
+}
+
+.team .card-text {
+    color:rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    text-align: left;
+    font-weight: 50px;
+}
+
+.cypher-team .card {
+    background-color: white;
+    color: black;
+}
+
+.senior-advisors .card {
+    background-color: black;
+    color: white;
 }
 
 /* Title Section CSS */
@@ -37,9 +357,7 @@ div.card {
     padding-top: 5%;
     padding-left: 1%;
     padding-right: 1%;
-    outline: 2px solid black;
     width: 555px;
-    height: 321px;
     border-radius: 6px;
 }
 

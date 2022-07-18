@@ -1,0 +1,122 @@
+{
+    "Adam Levine" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "VP of Strategy, Fireblocks",
+        "Image" : ""
+    },
+    "Amol Shah" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "CRO, Quicknode",
+        "Image" : ""
+    },
+    "Anoop Singh" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Strategic Initiatives, TaxBit",
+        "Image" : ""
+    },
+    "Arpan Gautam" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Business, Dexterity Capital",
+        "Image" : ""
+    },
+    "Bradley Kam" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Co-Founder, Unstoppable Domains",
+        "Image" : ""
+    },
+    "Chandan Mishra" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Solutions Team, Dapper Labs",
+        "Image" : ""
+    },
+    "Chris Hanlon" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Finance and Corporate Development, DirectBooks",
+        "Image" : ""
+    },
+    "David Gogel" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Growth & Operations, dYdX",
+        "Image" : ""
+    },
+    "Gregg Spiridellis" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "CEO and Co-Founder, HiHo",
+        "Image" : ""
+    },
+    "Jamie Finn" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Co-Founder & President, Securitize",
+        "Image" : ""
+    },
+    "Jeff Hasselman" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Global Startup Lead Crypto, Blockchain, and Digital Assets, AWS",
+        "Image" : ""
+    },
+    "Joey Krug" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Co-Chief Investment Officer, Pantera Capital",
+        "Image" : ""
+    },
+    "Lauren Stephanian" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Principal, Pantera Capital",
+        "Image" : ""
+    },
+    "Leah Jonas" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Global Partnerships, Celsius Network",
+        "Image" : ""
+    },
+    "Manish Punjabi" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Global Head of Business Development, AWS",
+        "Image" : ""
+    },
+    "Matt Immerso" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of New Investments, Blockchange Ventures",
+        "Image" : ""
+    },
+    "Michael Rinzler" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Executive Vice President and Partner, Jazwares",
+        "Image" : ""
+    },
+    "Min Wei" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "Head of Partnership, Blockchain.com",
+        "Image" : ""
+    },
+    "Reid Cuming" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "VP and GM, Compound Treasury",
+        "Image" : ""
+    },
+    "Rich Kerschner" : {
+        "LinkedIn" : "example.com",
+        "Twitter" : "example.com",
+        "Position" : "CEO, DirectBooks",
+        "Image" : ""
+    }
+}

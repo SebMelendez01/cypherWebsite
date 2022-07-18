@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Cohort from './components/Cohort'
+import Navibar from './components/Navibar';
+import Hero from './components/Hero';
+import Information from './components/Information';
+import Engage from './components/Engage';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -19,7 +24,12 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <Navibar/>
+      <Hero/>
+      <Information/>
       <Cohort/>
+      <Engage/>
+      <Team/>
     </div>
   );
 }
