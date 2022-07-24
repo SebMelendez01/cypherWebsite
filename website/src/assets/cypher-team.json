@@ -1,0 +1,56 @@
+{
+    "Sarah Hammer" : {
+        "LinkedIn" : "https://www.linkedin.com/in/sarahhammer1/",
+        "Twitter" : "https://twitter.com/FinanceHammer",
+        "Position" : "Managing Director",
+        "Image" : "sarah_hammer"
+    },
+    "Clea Chen" : {
+        "LinkedIn" : "https://www.linkedin.com/in/cleachen/",
+        "Twitter" : "",
+        "Position" : "Accelerator Manager",
+        "Image" : "clea_chen"
+    },
+    "Chongwu Du" : {
+        "LinkedIn" : "https://www.linkedin.com/in/chongwu-du-80968023/",
+        "Twitter" : "https://twitter.com/cyphercdu",
+        "Position" : "Accelerator Manager",
+        "Image" : "chongwu_du"
+    },
+    "Seb Melendez" : {
+        "LinkedIn" : "https://www.linkedin.com/in/sebastian-melendez-56a7881b3/",
+        "Twitter" : "https://twitter.com/_SebMelendez",
+        "Position" : "Accelerator Manager",
+        "Image" : "sebastian_melendez"
+    },
+    "Shiva Menta" : {
+        "LinkedIn" : "https://www.linkedin.com/in/shiva-menta-472750147/",
+        "Twitter" : "https://twitter.com/MentaShiva",
+        "Position" : "Accelerator Manager",
+        "Image" : "shiva_menta"
+    },
+    "Sudy Sarathy" : {
+        "LinkedIn" : "https://www.linkedin.com/in/sudarshansarathy",
+        "Twitter" : "https://twitter.com/SudySarathy",
+        "Position" : "Accelerator Manager",
+        "Image" : "sudarshan_sarathy"
+    },
+    "Rishin Sharma" : {
+        "LinkedIn" : "https://www.linkedin.com/in/rishinsharma/",
+        "Twitter" : "https://twitter.com/chef_rish",
+        "Position" : "Accelerator Manager",
+        "Image" : "rishin_sharma"
+    },
+    "Khushi Shelat" : {
+        "LinkedIn" : "https://www.linkedin.com/in/khushishelat/",
+        "Twitter" : "https://twitter.com/khushi_shelat",
+        "Position" : "Accelerator Manager",
+        "Image" : "khushi_shelat"
+    },
+    "Catrina Wang" : {
+        "LinkedIn" : "https://www.linkedin.com/in/catrina-wang-93194164/",
+        "Twitter" : "https://twitter.com/curiouscat817",
+        "Position" : "Accelerator Manager",
+        "Image" : "catrina_wang"
+    }
+}

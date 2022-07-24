@@ -10,6 +10,8 @@ import Partners from './components/Partners';
 
 function App() {
   return (
+
+
     <div className="App">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -27,7 +29,7 @@ function App() {
       </header> */}
       <Navibar/>
       <Hero/>
-      <Information/>
+      <Information class="scrollTest"/>
       <Cohort/>
       <Engage/>
       <Team/>

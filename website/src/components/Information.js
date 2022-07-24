@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import "bootstrap/dist/css/bootstrap.min.css";
-// import './Component.css';
+import './Component.css';
 
 class Information extends React.Component {
     render () {
         return (
-            <div class="information">
+            <div class="information" id="info">
                 <div class="information-text">
                     <div class="subtext">WE USE OUR RESOURCES TO SUPPORT YOU.</div>
                     <div class="text">Learn How We</div>

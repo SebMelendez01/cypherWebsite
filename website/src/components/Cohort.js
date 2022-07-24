@@ -8,16 +8,11 @@ import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import './SEBComponent.css';
+import './Component.css';
 
 import quotes from '../assets/quotes.json'
 
-
-
-
 function Cohort() {
-  // let counter = useRef(0); 
-  // const [intervalId, setIntervalId] = useState(quotes[counter.current]);
   const [counter, setCounter] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +28,7 @@ function Cohort() {
 
 
   return (
-    <div className="cohort">
+    <div className="cohort" id="cohort">
       <div className='flex-container'>
         <div className='flex-child' id='quote-card'>
           <div className='background-box'></div>
@@ -54,8 +49,8 @@ function Cohort() {
         </div>
         <div className='flex-child' id='intro-right'>
           <div className="title">
-            <p id='subtitle-top'><b>WE ACCEPT COMPANIES FROM ALL OVER THE WORLD.</b></p>
-            <h1 id='subtitle-bottom'><b>Meet Our Genesis <br/> Cohort.</b></h1>
+            <div class="subtext">WE ACCEPT COMPANIES FROM ALL OVER THE WORLD.</div>
+            <div class="text">Meet Our Genesis <br/> Cohort.</div>
           </div>
           <div className='map'>
             <Map/>

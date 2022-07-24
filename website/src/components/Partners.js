@@ -3,13 +3,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import './SEBComponent.css';
+import './Component.css';
 
 function Partners() {
 
   return (
     <div className="partners">
-      <h2> <b>Corportate Partners</b></h2>
+      <div class="subtitle">Corporate Partners</div>
       <Container>
         <Row>
           <Col><a href='https://aws.amazon.com/'><img className='partner-logo' height="60" src={require('../assets/images/partners/aws.png')} alt=''/></a></Col>

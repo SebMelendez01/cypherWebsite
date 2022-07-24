@@ -1,80 +1,80 @@
 {
     "Jeff Amico" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/jeffrey-amico-5857aa19/",
+        "Twitter" : "https://twitter.com/_jamico?lang=en",
         "Position" : "Partner, Andreessen Horowitz",
-        "Image" : ""
+        "Image" : "jeff_amico"
     },
     "Charles Birnbaum" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/charlesbirnbaum/",
+        "Twitter" : "https://twitter.com/cbirn?s=20",
         "Position" : "Partner, Bessemer Venture Partners",
-        "Image" : ""
+        "Image" : "charles_birnbaum"
     },
     "Stefan Cohen" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "Position" : "Partner, Bain Capital",
-        "Image" : ""
+        "LinkedIn" : "https://www.linkedin.com/in/stefan-cohen-90bb1b21/",
+        "Twitter" : "https://twitter.com/stefancoh?s=20",
+        "Position" : "Partner, Bain Capital Crypto",
+        "Image" : "stefan_cohen"
     },
     "Mark Cuban" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/mark-cuban-06a0755b/",
+        "Twitter" : "https://twitter.com/mcuban?s=20",
         "Position" : "Chairman, Cuban Companies",
-        "Image" : ""
+        "Image" : "mark_cuban"
     },
     "Tim Draper" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/timothydraper/",
+        "Twitter" : "https://twitter.com/TimDraper?s=20",
         "Position" : "Chairman, Draper Associates",
-        "Image" : ""
+        "Image" : "tim_draper"
     },
     "Amias Gerety" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/amias-gerety/",
+        "Twitter" : "https://twitter.com/amiasmg?s=20",
         "Position" : "Partner, QED Investors",
-        "Image" : ""
+        "Image" : "amias_gerety"
     },
     "Chris Giancarlo" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "Position" : "Senior Counsel, Wilkie Farr & Gallagher and Former CFTC Chair",
-        "Image" : ""
+        "LinkedIn" : "https://www.linkedin.com/in/j-christopher-giancarlo-77257111/",
+        "Twitter" : "https://twitter.com/giancarlomkts?lang=en",
+        "Position" : "Sr. Counsel, Wilkie Farr & Gallagher",
+        "Image" : "chris_giancarlo"
     },
     "Nick Grossman" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/nickgrossman/",
+        "Twitter" : "https://twitter.com/nickgrossman?s=20",
         "Position" : "Partner, Union Square Ventures",
-        "Image" : ""
+        "Image" : "nick_grossman"
     },
     "Joe Guagliardo" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "Position" : "Technology and Blockchain Partner, Dentons",
-        "Image" : ""
+        "LinkedIn" : "https://www.linkedin.com/in/joe-guagliardo-395100/",
+        "Twitter" : "https://twitter.com/joeg_techchain?lang=en",
+        "Position" : "Tech and Blockchain Partner, Dentons",
+        "Image" : "joe_guagliardo"
     },
     "Sameer Gupta" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "Position" : "Head of Data Solutions, Point72 and New York Mets",
-        "Image" : ""
+        "LinkedIn" : "https://www.linkedin.com/in/guptasameer99/",
+        "Twitter" : "https://twitter.com/sg0607?s=20",
+        "Position" : "Head of Data, Point72 and NY Mets",
+        "Image" : "sameer_gupta"
     },
     "Joshua Klayman" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "Position" : "Global Tech Sector Co-Head and Head of Blockchain, Linklaters",
-        "Image" : ""
+        "LinkedIn" : "https://www.linkedin.com/in/joshua-ashley-klayman/",
+        "Twitter" : "https://twitter.com/josh_blockchain?s=20",
+        "Position" : "U.S. Head of Fintech, Linklaters",
+        "Image" : "joshua_klayman"
     },
     "Joey Krug" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
-        "Position" : "Co-Chief Investment Officer, Pantera Capital",
-        "Image" : ""
+        "LinkedIn" : "https://www.linkedin.com/in/joeykrug/",
+        "Twitter" : "https://twitter.com/joeykrug?lang=en",
+        "Position" : "Co-CIO, Pantera Capital",
+        "Image" : "joey_krug"
     },
     "Paul Veradittakit" : {
-        "LinkedIn" : "example.com",
-        "Twitter" : "example.com",
+        "LinkedIn" : "https://www.linkedin.com/in/veradittakit/",
+        "Twitter" : "https://twitter.com/veradittakit?lang=en",
         "Position" : "Partner, Pantera Capital",
-        "Image" : ""
+        "Image" : "paul_veradittakit"
     }
 }

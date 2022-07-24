@@ -1,10 +1,56 @@
+/* General Rules */
+
 div {
     font-family: 'Metropolis';
+    
 }
 
 p {
     font-family: 'Proxima Nova';
 }
+
+.flex-child {
+    flex-direction: 'row';
+}
+
+/* Scrollbar CSS */
+/* width */
+.scroll-through-left::-webkit-scrollbar {
+    height: 5px;
+
+}
+
+.scroll-through-right::-webkit-scrollbar {
+    height: 5px;
+
+}
+
+/* Track */
+.scroll-through::-webkit-scrollbar-track {
+    /* background: rgba(0, 0, 0, 0.2); */
+}
+  
+  /* Handle */
+.cypher-team .scroll-through-left::-webkit-scrollbar-thumb {
+    background-color: #00A6FC;
+    border-left: 10vw solid #ededed;
+    border-right: 10vw solid #ededed;
+}
+
+.senior-advisors .scroll-through-right::-webkit-scrollbar-thumb {
+    background: #DD7CFF;
+    border-left: 10vw solid #ededed;
+    border-right: 10vw solid #ededed;
+}
+  
+  /* Handle on hover */
+.cypher-team .scroll-through-left::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 186, 252, 0.75);
+}
+.senior-advisors .scroll-through-right::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(221, 124, 255, 0.75);
+}
+
 
 
 /* Buttons CSS */
@@ -29,6 +75,7 @@ button {
     background: #FFFFFF;
     border: 3px solid #000000;
     border-radius: 5px;
+    box-shadow: 5px 5px #00A6FC;
 
 }
 
@@ -39,23 +86,12 @@ button {
 }
 
 .gradient-button-2 {
-    background: linear-gradient(85.58deg, #00A6FC 1.29%, #DD7CFF 74.66%);
+    background: linear-gradient(85.58deg, #1b6e9b 1.29%, #87599b 74.66%);
     border: 3px solid #000000;
     border-radius: 5px;
     color: white;
     position: relative;
-}
-
-.gradient-button-2::after {
-    position: absolute;
-    background-color: rgba(49, 54, 57, 0.5);
-
-    left: 0;
-    top: 0%;
-    height: 100%;
-    content: "";
-    width: 100%;
-    display: block;
+    box-shadow: 5px 5px black;
 }
 
 /* Navigation Bar CSS */
@@ -73,6 +109,7 @@ button {
     transition: top 0.3s;
     animation-timing-function: linear;
     background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
 }
 
 .nav-bar-scroll {
@@ -87,7 +124,9 @@ button {
     z-index: 9999;
     transition: top 0.3s;
     animation-timing-function: linear;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    height: 10vh;
 }
 
 .nav-guides {
@@ -106,6 +145,7 @@ button {
     font-family: 'Proxima Nova';
     font-weight: 600;
     padding: 0.5rem 1.5rem;
+    text-decoration: none;
 }
 
 /* Hero Section CSS */
@@ -134,7 +174,7 @@ button {
     height: 10vh;
 }
 
-.heroText {
+#fier {
     background-image: url("../assets/images/hero-background-image.png");
     background-size:100%;
     text-align: right;
@@ -178,7 +218,7 @@ button {
 .subtext {
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 24px;
     color: rgba(34, 34, 34, 0.66);
 }
@@ -187,15 +227,18 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 5vw;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
 }
 
 .bcf-card .card {
     background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
     outline: 1px solid #000000;
     border-radius: 6px;
-    width: 225px;
-    padding-bottom: 5px;
+    width: 250px;
+    padding: 4px;
+    box-shadow: 5px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bcf-card .card-title {
@@ -205,28 +248,206 @@ button {
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
+    padding-top: 5px;;
 }
 
 .bcf-card .card-text {
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 24px;
     text-align: center;
-
+    padding: 10px;
     color: #FFFFFF;
 
 }
 
+/* Intro Genesis Cohort Section */
+.cohort {
+    margin: 5%;
+}
+
+.card-body#quote-body {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.flex-child#intro-right, .flex-child#card-right  {
+    width: 60%;
+    margin-left: auto; 
+    margin-right: 0;   
+    text-align: right; 
+}
+
+.flex-child#card-right {
+    align-self: flex-end;
+}
+.flex-child#card-right > .card-title {
+    font-size: 1.5vw;
+}
+.flex-child#card-right > .card-subtitle {
+    font-size: 1.25vw;
+}
+
+p#subtitle-top {
+    font-size: 1vw;
+}
+
+h1#subtitle-bottom {
+    font-size: 6vw;
+}
+
+#quote-card {
+    width: 35%;
+    margin-top: 10%;
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+#quote-card > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.background-box {
+    height: 50%;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background: linear-gradient(71.24deg, #00A6FC 0%, #DD7CFF 98.86%);;
+    z-index: 1;
+}
+
+#quote-card > .card {
+    height: 50%;
+    outline: 2px solid black;
+    z-index: 2;
+}
+
+.card-text#quote-text {
+    margin-top: 5%;
+    font-size: 1.5vw;
+}
+
+.flex-child#card-left > img{
+    width: 7vw;
+}
+
+.map {
+    text-align: center;
+}
+
+/* Company Grid */
+.company {
+    margin-top: 10%;
+}
+
+.cohort-grid {
+    margin-top: -10%;
+}
+
+/* Company Cards */
+.company-card {
+    outline: 2px solid black;
+    box-shadow: 5px 5px;
+    margin-right: 5%;
+    margin-left: 10%;
+}
+
+.company-card:hover {
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 0px;
+}
+
+.flex-child#company-logo > img{
+    width:90%;
+    background-color: black;
+    border-radius: 5%;
+}
+
+#company-info {
+    margin-left: 5%;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.flex-child#company-logo {
+    width: 30%;
+    vertical-align: middle;
+}
+
+.flex-child#company-info .card-title{
+    text-align: left;
+    font-size: 1.25vw;
+}
+
+
+.flex-child#company-links a svg{
+    color: black;
+    width: 40%;
+    margin: 5%;
+    /* align-content: flex-end; */
+    
+}
+
+#tags > div > span {
+    font-size: .75vw;
+}
+
+/* Popup Company Description */
+.flex-child#popup-modal {
+    /* background-color: #222222; */
+    width: 60%;
+}
+
+.model-title {
+    padding-right: 10%;
+}
+
+#popup-modal > div.modal-header > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+.flex-child#popup-img {
+    width: 40%;
+    vertical-align: middle;
+}
+.flex-child#popup-img > img{
+    width: 90%;
+    margin: 5%;
+    border-radius: 5px;
+    background-color: black;
+}
+
+#popup-modal > div.modal-footer > a {
+    color: black;
+}
+
+#popup-modal > div.modal-body > p {
+    font-size: 90%;
+}
+
+#popup-modal > div.modal-body > p {
+    /* color: white; */
+    font-size: .75vw;
+}
+
 /* Engage Section CSS */
+
+
 .engage-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     position: relative;
-    padding-left: 15vw;
-    padding-right: 15vw;
 }
 
 .engage-container::before {
@@ -240,9 +461,6 @@ button {
     display: block;
     border-top: 4px solid black;
     z-index: 0;
-}
-
-.engage-container .card {
 }
 
 .engage-container .card-title {
@@ -264,9 +482,15 @@ button {
     width: 30vw;
 }
 
-.engage-container .apply .card {
-    border: 4px solid #FFFFFF;
+.apply {
+    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 76.96%);
     border-radius: 9px;
+    padding: 4px;
+    position: relative;
+}
+
+.engage-container .apply .card {
+    border-radius: 5px;
     background-color: black;
     color: #F5F4F1;
     width: 50vw;
@@ -275,36 +499,103 @@ button {
 /* Team Section CSS */
 .team {
     text-align: left;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    /* padding-left: 10vw;
+    padding-right: 10vw; */
     padding-top: 10vh;
+    padding-bottom: 10vh;
     background-color: #ededed;
 }
 
-.team .subtitle {
+.team-text {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.subtitle {
     text-align: right;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 32px;
 
-    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 100%);
+    background: linear-gradient(270deg, #00A6FC 15%, #DD7CFF 25%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
-/* Team Section CSS */
-.team .card {
+.scroll-through-left {
+    min-width: 100%;
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+    padding-left: 10vw;
+    padding-right: 10vw;
+ 
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.scroll-through-right {
+    min-width: 100%;
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+    padding-right: 10vw;
+    padding-left: 10vw;
+ 
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cypher-team .card {
     width: 15vw;
     height: 15vw;
     font-family: 'Proxima Nova';
     border: 2px solid black;
+    border-radius: 6px;
+    margin-right: 40px;
+    padding: 2%;
+    
+}
+
+.senior-advisors .card {
+    width: 15vw;
+    height: 15vw;
+    font-family: 'Proxima Nova';
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-left: 40px;
+    margin-right: 5px;
+    padding: 2%;
+    
+}
+
+.team .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cypher-team .card {
+    box-shadow: 5px 5px #00A6FC;
+}
+
+.senior-advisors .card {
+    border: 2px solid white;
+    box-shadow: 5px 5px #DD7CFF;
 }
 
 .team .card-title {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -313,11 +604,18 @@ button {
     width: 5vh;
 }
 
-.team .card-text {
+.cypher-team .card-subtitle {
     color:rgba(0, 0, 0, 0.8);
-    font-size: 14px;
+    font-size: 13px;
     text-align: left;
-    font-weight: 50px;
+    font-weight: lighter;
+}
+
+.senior-advisors .card-subtitle {
+    color:white;
+    font-size: 13px;
+    text-align: left;
+    font-weight: lighter;
 }
 
 .cypher-team .card {
@@ -330,6 +628,36 @@ button {
     color: white;
 }
 
+.scroll-cushion {
+    height: 20px;
+}
+
+.slider-container-left {
+    /* padding-left: 10vw; */
+}
+
+.slider-container-right {
+    /* padding-right: 10vw; */
+}
+
+.team .card-img {
+    width: 70px;
+    height: 70px;
+    border: solid 3px #F3F4F5;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.cypher-team .card-img {
+    border: solid 3px rgba(34, 34, 34, 0.66);
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: auto;
+}
+
 /* Title Section CSS */
 .title {
     position: relative;
@@ -339,55 +667,77 @@ button {
 
 .flex-container {
     display: flex;
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 100%
 }
 
-.flex-child {
-    flex: 1;
-}  
-
-.flex-child:first-child {
-    margin-top: -5%;
-} 
 
 
+/* Corporate Partners Section */
+.partners {
+    background: #222222;
+}
 
-div.card {
+.partners .subtitle {
+    background: linear-gradient(270deg, #00A6FC 40%, #DD7CFF 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.partner-logo {
+    opacity: 0.5;
+    height: 50px;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.partners {
     padding-top: 5%;
-    padding-left: 1%;
+    padding-bottom: 5%;
+}
+
+.partners > div > div:nth-child(1) {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.partners > div > div:nth-child(2) {
+    padding-top: 2.5%;
+}
+
+/* Footer Section */
+.footer {
+    background-color: black;
+    color: white;
+    /* padding: 1%; */
+    padding-top: 1%;
     padding-right: 1%;
-    width: 555px;
-    border-radius: 6px;
+    padding-left: 1%;
 }
 
-div.card-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: right;
+.footer > div > div:nth-child(2) > a {
+    color: white;
+    vertical-align: middle;
 }
 
-div.card-subtitle {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: right;
-}
-
-p.card-text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 30px;
-    padding-top: 5%;
-}
-
-
-/* map */
-/* img {
+.flex-child#footer-left {
+    text-align: left;
     width: 50%;
-    height: auto;
-} */
+}
+.flex-child#footer-right {
+    text-align: right;
+    width: 50%;
+}
+
+#footer-right > a:nth-child(6) {
+    padding-right: 2.5%;
+}
+#footer-right > svg:nth-child(7) {
+    margin-right: 1%;
+}
+
+

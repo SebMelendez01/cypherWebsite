@@ -2,9 +2,10 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import React, { useState } from 'react'
 import cypherNavbarLogo from '../assets/images/cypher-logo-white.png'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import "bootstrap/dist/css/bootstrap.min.css"
-// import './Component.css';
+import './Component.css';
 
 function Navibar() {
     const [colorState, setColorState] = useState(false);
@@ -16,12 +17,12 @@ function Navibar() {
             setColorState(false);
         }
     }
-
+    
     const changeScrollState = () => {
         var currentScrollPos = window.pageYOffset;
-        if(scrollState > currentScrollPos) {
+        if(scrollState > currentScrollPos) { // going up
             document.getElementById("nav").style.top = "0";
-        } else {
+        } else if (currentScrollPos > 600) { // going down
             document.getElementById("nav").style.top = "-15vh";
         }
         setScrollState(window.pageYOffset);
@@ -39,11 +40,9 @@ function Navibar() {
                 </Navbar.Brand>
                 <Nav class="nav-guides">
                     <Nav class="links">
-                        <Nav.Link>About</Nav.Link>
-                        <Nav.Link>Cohort</Nav.Link>
                         <Nav.Link>Team</Nav.Link>
-                        <Nav.Link>Get Involved</Nav.Link>
                         <Nav.Link>News</Nav.Link>
+                        <Nav.Link>Get Involved</Nav.Link>
                     </Nav>
                     <button class="gradient-button">Apply</button>
                 </Nav>     

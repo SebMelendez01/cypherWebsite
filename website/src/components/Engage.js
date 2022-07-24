@@ -1,12 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-// import './Component.css';
 import Card from 'react-bootstrap/Card';
+ import './Component.css';
+
 
 class Engage extends React.Component {
     render () {
         return (
-            <div class="engage-container">
+            <div class="engage-container" id="engage">
                 <div class="get-involved">
                     <Card>
                         <Card.Body>
