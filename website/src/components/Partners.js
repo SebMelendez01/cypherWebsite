@@ -9,7 +9,7 @@ function Partners() {
 
   return (
     <div className="partners">
-      <div class="subtitle">Corporate Partners</div>
+      <div className="subtitle">Corporate Partners</div>
       <Container>
         <Row>
           <Col><a href='https://aws.amazon.com/'><img className='partner-logo' height="60" src={require('../assets/images/partners/aws.png')} alt=''/></a></Col>

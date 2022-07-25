@@ -9,11 +9,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './Component.css';
 
 import cohort from '../assets/cohort.json'
+import { Button } from 'react-bootstrap';
 
 // https://react-bootstrap.github.io/components/modal/
-function MyVerticallyCenteredModal(props) {
-  const name = props.company;
+export function MyVerticallyCenteredModal(props) {
+  const [name, setName]= useState(props.company);
+  const [index, setIndex] = useState(1);
+
   const data = cohort;
+
+
+  function handleClick() {
+    setIndex(index + 1); 
+    if(index >= props.companyArray.length - 1) {
+      setIndex(0);
+    }
+    setName(props.companyArray[index])
+  }
+  
+  
   return (
     <Modal
       {...props}
@@ -28,16 +42,17 @@ function MyVerticallyCenteredModal(props) {
         </div>
         <div className='flex-child' id='popup-modal'>
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">{props.company}</Modal.Title>
-            <div>{props.tags}</div>
+            <Modal.Title id="contained-modal-title-vcenter">{name}</Modal.Title>
+            <div>{!props.nextButton && props.tags}</div>
           </Modal.Header>
           <Modal.Body>
-            <p>{cohort[props.company].description}</p>
+            <p>{cohort[name].description}</p>
           </Modal.Body>
           <Modal.Footer>
             <a href={data[name].website}> <TbWorld size={30}/></a>
             <a href={data[name].LinkedIn}><FaLinkedin size={30}/></a>
-            <a href={data[name].Twitter}><FaTwitterSquare size={30}/></a> 
+            <a href={data[name].Twitter}><FaTwitterSquare size={30}/></a>
+            {props.nextButton && props.companyArray.length > 1 && <Button onClick={() => {handleClick()}} style={{ maxWidth:'25%', color:'white', backgroundColor: 'black'}} variant="">Next</Button>}
           </Modal.Footer>
         </div>
       </div>
@@ -45,7 +60,7 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-export default function Company(props) {
+export function Company(props) {
   const [modalShow, setModalShow] = useState(false);
   const name = props.name;
   const data = cohort;
@@ -89,12 +104,11 @@ export default function Company(props) {
         onHide={() => setModalShow(false)}
         company = {name}
         tags={tags}
+        nextbutton={false}
       />
       
     </div>
   );
 }
   
-export {Company, MyVerticallyCenteredModal};
-
   

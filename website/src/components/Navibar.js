@@ -33,18 +33,18 @@ function Navibar() {
         changeScrollState();
     });
     return (
-        <div class={colorState ? 'nav-bar-scroll' : 'nav-bar'} id="nav">
+        <div className={colorState ? 'nav-bar-scroll' : 'nav-bar'} id="nav">
             <Navbar>
                 <Navbar.Brand>
                     <img src={cypherNavbarLogo} width="175px"/>
                 </Navbar.Brand>
-                <Nav class="nav-guides">
-                    <Nav class="links">
+                <Nav className="nav-guides">
+                    <Nav className="links">
                         <Nav.Link>Team</Nav.Link>
                         <Nav.Link>News</Nav.Link>
                         <Nav.Link>Get Involved</Nav.Link>
                     </Nav>
-                    <button class="gradient-button">Apply</button>
+                    <button className="gradient-button">Apply</button>
                 </Nav>     
             </Navbar>
         </div>

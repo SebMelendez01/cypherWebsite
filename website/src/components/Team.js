@@ -10,28 +10,28 @@ function Team() {
     const AdvisorMembers = [];
 
     for (var key in CypherTeam) {
-        CypherTeamMembers.push(<Member name={key} type="Cypher" data={CypherTeam[key]}></Member>)
+        CypherTeamMembers.push(<Member key={key} name={key} type="Cypher" data={CypherTeam[key]}></Member>)
     }
     for (var key in Advisors) {
-        AdvisorMembers.push(<Member name={key} type="Advisor" data={Advisors[key]}></Member>)
+        AdvisorMembers.push(<Member key={key} name={key} type="Advisor" data={Advisors[key]}></Member>)
     }
     
     return (
-        <div class="team" id="team">
-            <div class="team-text">
-                <div class="subtext">WE ARE HERE TO HELP.</div>
-                <div class="text">Meet Our Team.</div>
+        <div className="team" id="team">
+            <div className="team-text">
+                <div className="subtext">WE ARE HERE TO HELP.</div>
+                <div className="text">Meet Our Team.</div>
             </div>
-            <div class="cypher-team">
-                <div class="subtitle">Cypher Managers</div>
-                <div class="slider-container-left">
-                    <div class="scroll-through-left">{CypherTeamMembers}</div>
+            <div className="cypher-team">
+                <div className="subtitle">Cypher Managers</div>
+                <div className="slider-container-left">
+                    <div className="scroll-through-left">{CypherTeamMembers}</div>
                 </div>
             </div>
-            <div class="senior-advisors">
-                <div class="subtitle">Senior Advisors</div>
-                <div class="slider-container-right">
-                    <div class="scroll-through-right">{AdvisorMembers}</div>
+            <div className="senior-advisors">
+                <div className="subtitle">Senior Advisors</div>
+                <div className="slider-container-right">
+                    <div className="scroll-through-right">{AdvisorMembers}</div>
                 </div>
             </div>
         </div>

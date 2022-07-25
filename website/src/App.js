@@ -29,7 +29,7 @@ function App() {
       </header> */}
       <Navibar/>
       <Hero/>
-      <Information class="scrollTest"/>
+      <Information className="scrollTest"/>
       <Cohort/>
       <Engage/>
       <Team/>

@@ -6,14 +6,14 @@ import './Component.css';
 class Information extends React.Component {
     render () {
         return (
-            <div class="information" id="info">
-                <div class="information-text">
-                    <div class="subtext">WE USE OUR RESOURCES TO SUPPORT YOU.</div>
-                    <div class="text">Learn How We</div>
-                    <div class="text">Can Help.</div>
+            <div className="information" id="info">
+                <div className="information-text">
+                    <div className="subtext">WE USE OUR RESOURCES TO SUPPORT YOU.</div>
+                    <div className="text">Learn How We</div>
+                    <div className="text">Can Help.</div>
                 </div>
-                <div class="bcf-card-container">
-                    <div class="bcf-card">
+                <div className="bcf-card-container">
+                    <div className="bcf-card">
                         <Card>
                             <Card.Body>
                                 <Card.Title>BUILD</Card.Title>
@@ -24,7 +24,7 @@ class Information extends React.Component {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div class="bcf-card">
+                    <div className="bcf-card">
                         <Card>
                             <Card.Body>
                                 <Card.Title>CONNECT</Card.Title>
@@ -35,7 +35,7 @@ class Information extends React.Component {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div class="bcf-card">
+                    <div className="bcf-card">
                         <Card>
                             <Card.Body>
                                 <Card.Title>FUND</Card.Title>

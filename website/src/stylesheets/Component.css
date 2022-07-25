@@ -1,56 +1,10 @@
-/* General Rules */
-
 div {
     font-family: 'Metropolis';
-    
 }
 
 p {
     font-family: 'Proxima Nova';
 }
-
-.flex-child {
-    flex-direction: 'row';
-}
-
-/* Scrollbar CSS */
-/* width */
-.scroll-through-left::-webkit-scrollbar {
-    height: 5px;
-
-}
-
-.scroll-through-right::-webkit-scrollbar {
-    height: 5px;
-
-}
-
-/* Track */
-.scroll-through::-webkit-scrollbar-track {
-    /* background: rgba(0, 0, 0, 0.2); */
-}
-  
-  /* Handle */
-.cypher-team .scroll-through-left::-webkit-scrollbar-thumb {
-    background-color: #00A6FC;
-    border-left: 10vw solid #ededed;
-    border-right: 10vw solid #ededed;
-}
-
-.senior-advisors .scroll-through-right::-webkit-scrollbar-thumb {
-    background: #DD7CFF;
-    border-left: 10vw solid #ededed;
-    border-right: 10vw solid #ededed;
-}
-  
-  /* Handle on hover */
-.cypher-team .scroll-through-left::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 186, 252, 0.75);
-}
-.senior-advisors .scroll-through-right::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(221, 124, 255, 0.75);
-}
-
 
 
 /* Buttons CSS */
@@ -75,7 +29,6 @@ button {
     background: #FFFFFF;
     border: 3px solid #000000;
     border-radius: 5px;
-    box-shadow: 5px 5px #00A6FC;
 
 }
 
@@ -85,21 +38,13 @@ button {
     border-radius: 6px;
 }
 
-.gradient-button-2 {
-    background: linear-gradient(85.58deg, #1b6e9b 1.29%, #87599b 74.66%);
-    border: 3px solid #000000;
-    border-radius: 5px;
-    color: white;
-    position: relative;
-    box-shadow: 5px 5px black;
-}
 
 /* Navigation Bar CSS */
 
 .nav-bar {
     font-family: 'Proxima Nova';
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -109,13 +54,12 @@ button {
     transition: top 0.3s;
     animation-timing-function: linear;
     background-color: rgba(0, 0, 0, 0);
-    height: 10vh;
 }
 
 .nav-bar-scroll {
     font-family: 'Proxima Nova';
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -124,9 +68,7 @@ button {
     z-index: 9999;
     transition: top 0.3s;
     animation-timing-function: linear;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(6px);
-    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .nav-guides {
@@ -140,12 +82,21 @@ button {
     margin-left: 15px;
 }
 
+.nav-button {
+    box-shadow: 5px 5px;
+}
+
+.nav-button:hover {
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 0px;
+}
+
 .nav-link {
     color: white !important;
     font-family: 'Proxima Nova';
     font-weight: 600;
     padding: 0.5rem 1.5rem;
-    text-decoration: none;
 }
 
 /* Hero Section CSS */
@@ -161,12 +112,12 @@ button {
     color: white;
 }
 
-.heroContainer {
+.hero-container {
     display: flex;
     flex-direction: column;
 }
 
-.heroLogos {
+.hero-logos {
     background-color: black;
     display: flex;
     justify-content: space-evenly;
@@ -174,15 +125,15 @@ button {
     height: 10vh;
 }
 
-#fier {
+.hero-text {
     background-image: url("../assets/images/hero-background-image.png");
     background-size:100%;
     text-align: right;
     padding-right: 10vw;
     display: flex;
     flex-direction: column;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-top: 23vh;
+    /* padding-bottom: 15vh; */
     gap: 20px;
     height: 90vh;
 }
@@ -218,7 +169,7 @@ button {
 .subtext {
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 24px;
     color: rgba(34, 34, 34, 0.66);
 }
@@ -227,43 +178,65 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 5vw;
-    padding-bottom: 10vh;
+    padding-bottom: 15vh;
 }
 
 .bcf-card .card {
     background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
     outline: 1px solid #000000;
     border-radius: 6px;
-    width: 250px;
-    padding: 4px;
-    box-shadow: 5px 5px;
-    display: flex;
-    flex-direction: column;
+    width: 245px;
+    height: 350px;
+    padding-bottom: 5px;
+    box-shadow: 7.5px 7.5px;
+    position: relative;
 }
+
+.bcf-card .card-body .card-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+}
+
+.bcf-card .card:hover {
+    top: 7.5px;
+    left: 7.5px;
+    box-shadow: 0px 0px;
+}
+
+
 
 .bcf-card .card-title {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 24px;
-    text-align: center;
+    /* text-align: center; */
     color: #FFFFFF;
-    padding-top: 5px;;
 }
 
 .bcf-card .card-text {
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 24px;
     text-align: center;
-    padding: 10px;
     color: #FFFFFF;
-
 }
 
-/* Intro Genesis Cohort Section */
+/* Genesis Cohort Section */
+
+.flex-container {
+    display: flex;
+    width:100%;
+}
+
+.flex-child {
+    flex-direction: 'row';
+}
+
 .cohort {
     margin: 5%;
 }
@@ -328,7 +301,7 @@ h1#subtitle-bottom {
 }
 
 .card-text#quote-text {
-    margin-top: 5%;
+    margin-top: 7.5%;
     font-size: 1.5vw;
 }
 
@@ -339,8 +312,8 @@ h1#subtitle-bottom {
 .map {
     text-align: center;
 }
+/* Company Card Section */
 
-/* Company Grid */
 .company {
     margin-top: 10%;
 }
@@ -352,14 +325,14 @@ h1#subtitle-bottom {
 /* Company Cards */
 .company-card {
     outline: 2px solid black;
-    box-shadow: 5px 5px;
+    box-shadow: 7.5px 7.5px;
     margin-right: 5%;
     margin-left: 10%;
 }
 
 .company-card:hover {
-    top: 5px;
-    left: 5px;
+    top: 7.5px;
+    left: 7.5px;
     box-shadow: 0px 0px;
 }
 
@@ -393,9 +366,7 @@ h1#subtitle-bottom {
 .flex-child#company-links a svg{
     color: black;
     width: 40%;
-    margin: 5%;
-    /* align-content: flex-end; */
-    
+    margin: 5%;    
 }
 
 #tags > div > span {
@@ -404,7 +375,6 @@ h1#subtitle-bottom {
 
 /* Popup Company Description */
 .flex-child#popup-modal {
-    /* background-color: #222222; */
     width: 60%;
 }
 
@@ -436,18 +406,19 @@ h1#subtitle-bottom {
 }
 
 #popup-modal > div.modal-body > p {
-    /* color: white; */
     font-size: .75vw;
 }
 
+
+
 /* Engage Section CSS */
-
-
 .engage-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     position: relative;
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
 .engage-container::before {
@@ -463,139 +434,95 @@ h1#subtitle-bottom {
     z-index: 0;
 }
 
+.engage-container .card {
+    height: 30vh;
+    position: relative;
+}
+
+.engage-container .card-body {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
 .engage-container .card-title {
     text-align: center;
     font-size: 36px;
+    font-weight: 600;
 }
 
 .engage-container .card-text {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .engage-container .get-involved .card {
     background: linear-gradient(146.6deg, #00A6FC 0%, #DD7CFF 76.96%);
     border: 4px solid #000000;
     border-radius: 9px;
-
     color: rgba(0, 0, 0, 0.68);
     width: 30vw;
 }
 
-.apply {
-    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 76.96%);
-    border-radius: 9px;
-    padding: 4px;
-    position: relative;
-}
-
 .engage-container .apply .card {
-    border-radius: 5px;
+    border: 4px solid #FFFFFF;
+    border-radius: 9px;
     background-color: black;
     color: #F5F4F1;
     width: 50vw;
 }
 
+.gradient-button-2 {
+    background: linear-gradient(85.58deg, #00A6FC 1.29%, #DD7CFF 74.66%);
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+}
+
+.gradient-button-2::after {
+    position: absolute;
+    background-color: rgba(49, 54, 57, 0.5);
+    left: 0;
+    top: 0%;
+    height: 100%;
+    content: "";
+    width: 100%;
+    display: block;
+}
+
 /* Team Section CSS */
 .team {
     text-align: left;
-    /* padding-left: 10vw;
-    padding-right: 10vw; */
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-top: 10vh;
-    padding-bottom: 10vh;
     background-color: #ededed;
 }
 
-.team-text {
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
-
-.subtitle {
+.team .subtitle {
     text-align: right;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 32px;
 
-    background: linear-gradient(270deg, #00A6FC 15%, #DD7CFF 25%);
+    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    padding-left: 10vw;
-    padding-right: 10vw;
 }
 
-.scroll-through-left {
-    min-width: 100%;
-    overflow-x: scroll !important;
-    overflow-y: hidden;
-    padding-left: 10vw;
-    padding-right: 10vw;
- 
-    margin-top: 2vh;
-    margin-bottom: 5vh;
-
-    display: flex;
-    justify-content: flex-start;
-}
-
-.scroll-through-right {
-    min-width: 100%;
-    overflow-x: scroll !important;
-    overflow-y: hidden;
-    padding-right: 10vw;
-    padding-left: 10vw;
- 
-    margin-top: 2vh;
-    margin-bottom: 5vh;
-
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.cypher-team .card {
+.team .card {
     width: 15vw;
     height: 15vw;
     font-family: 'Proxima Nova';
     border: 2px solid black;
-    border-radius: 6px;
-    margin-right: 40px;
-    padding: 2%;
-    
-}
-
-.senior-advisors .card {
-    width: 15vw;
-    height: 15vw;
-    font-family: 'Proxima Nova';
-    border: 2px solid black;
-    border-radius: 6px;
-    margin-left: 40px;
-    margin-right: 5px;
-    padding: 2%;
-    
-}
-
-.team .card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.cypher-team .card {
-    box-shadow: 5px 5px #00A6FC;
-}
-
-.senior-advisors .card {
-    border: 2px solid white;
-    box-shadow: 5px 5px #DD7CFF;
 }
 
 .team .card-title {
     text-align: left;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -604,18 +531,11 @@ h1#subtitle-bottom {
     width: 5vh;
 }
 
-.cypher-team .card-subtitle {
+.team .card-text {
     color:rgba(0, 0, 0, 0.8);
-    font-size: 13px;
+    font-size: 14px;
     text-align: left;
-    font-weight: lighter;
-}
-
-.senior-advisors .card-subtitle {
-    color:white;
-    font-size: 13px;
-    text-align: left;
-    font-weight: lighter;
+    font-weight: 50px;
 }
 
 .cypher-team .card {
@@ -628,38 +548,8 @@ h1#subtitle-bottom {
     color: white;
 }
 
-.scroll-cushion {
-    height: 20px;
-}
-
-.slider-container-left {
-    /* padding-left: 10vw; */
-}
-
-.slider-container-right {
-    /* padding-right: 10vw; */
-}
-
-.team .card-img {
-    width: 70px;
-    height: 70px;
-    border: solid 3px #F3F4F5;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.cypher-team .card-img {
-    border: solid 3px rgba(34, 34, 34, 0.66);
-}
-
-.card-icons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: auto;
-}
-
 /* Title Section CSS */
-.title {
+/* .title {
     position: relative;
     text-align: right;
     padding-right: 5%;
@@ -667,9 +557,58 @@ h1#subtitle-bottom {
 
 .flex-container {
     display: flex;
-    width: 100%
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-top: -5%;
+} 
+
+
+
+div.card {
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 555px;
+    border-radius: 6px;
+}
+
+div.card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: right;
+}
+
+div.card-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+}
+
+p.card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 5%;
+} */
+
+
+/* map */
+/* img {
+    width: 50%;
+    height: auto;
+} */
 
 
 /* Corporate Partners Section */
@@ -677,22 +616,19 @@ h1#subtitle-bottom {
     background: #222222;
 }
 
-.partners .subtitle {
-    background: linear-gradient(270deg, #00A6FC 40%, #DD7CFF 60%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
 .partner-logo {
     opacity: 0.5;
-    height: 50px;
 }
 
 .partner-logo:hover {
     opacity: 1;
+}
+
+.partners > h2 {
+    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .partners {
@@ -739,6 +675,3 @@ h1#subtitle-bottom {
 #footer-right > svg:nth-child(7) {
     margin-right: 1%;
 }
-/* .modal-90w {
-    margin-top: 500px;
- } */

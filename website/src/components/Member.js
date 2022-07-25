@@ -30,7 +30,7 @@ function Member(props) {
                 </Card.Body>
             </Card>
             <div>
-                <div class="scroll-cushion"></div>
+                <div className="scroll-cushion"></div>
             </div>
         </div>
         
