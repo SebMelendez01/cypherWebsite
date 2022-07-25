@@ -1,53 +1,56 @@
+import React, { useState } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import React, { useState } from 'react'
-import cypherNavbarLogo from '../assets/images/cypher-logo-white.png'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
+import cypherNavbarLogo from '../assets/images/logos/cypher-logo-white.png'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './Component.css';
 
 function Navibar() {
     const [colorState, setColorState] = useState(false);
     const [scrollState, setScrollState] = useState(0);
-    const changeNavibarColor = () => {
-        if(window.scrollY >= 1) {
+
+    var relevantHeight;
+    var currentScrollPos;
+
+    const changeNavbarColor = () => {
+        if (window.scrollY > 0) {
             setColorState(true);
         } else {
             setColorState(false);
         }
     }
     
-    const changeScrollState = () => {
-        var currentScrollPos = window.pageYOffset;
-        if(scrollState > currentScrollPos) { // going up
-            document.getElementById("nav").style.top = "0";
-        } else if (currentScrollPos > 600) { // going down
-            document.getElementById("nav").style.top = "-15vh";
+    const changeViewableStatus = () => {
+        relevantHeight = window.innerHeight * 0.9;
+        currentScrollPos = window.pageYOffset;
+
+        if (scrollState > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else if (currentScrollPos > relevantHeight) {
+            document.getElementById("navbar").style.top = "-10vh";
         }
+
         setScrollState(window.pageYOffset);
     }
 
     window.addEventListener('scroll', () => {
-        changeNavibarColor();
-        changeScrollState();
+        changeNavbarColor();
+        changeViewableStatus();
     });
+
     return (
-        <div class={colorState ? 'nav-bar-scroll' : 'nav-bar'} id="nav">
-            <Navbar>
-                <Navbar.Brand>
-                    <img src={cypherNavbarLogo} width="175px"/>
-                </Navbar.Brand>
-                <Nav class="nav-guides">
-                    <Nav class="links">
-                        <Nav.Link>Team</Nav.Link>
-                        <Nav.Link>News</Nav.Link>
-                        <Nav.Link>Get Involved</Nav.Link>
-                    </Nav>
-                    <button class="gradient-button">Apply</button>
-                </Nav>     
-            </Navbar>
-        </div>
+        <Navbar className={colorState ? 'navbar moving' : 'navbar clear'} id="navbar">
+            <Navbar.Brand>
+                <img src={cypherNavbarLogo} height="50vh"/>
+            </Navbar.Brand>
+            <Nav className="navbar-links-and-buttons">
+                <Nav.Link>Team</Nav.Link>
+                <Nav.Link>News</Nav.Link>
+                <Nav.Link>Get Involved</Nav.Link>
+                <a href='https://www.f6s.com/cypher-accelerator-cohort-2022/' target="_blank" rel="noopener noreferrer"><button class="gradient-button">Apply</button></a>
+            </Nav>     
+        </Navbar>
     );
 }
 

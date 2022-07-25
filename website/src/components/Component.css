@@ -1,145 +1,159 @@
-/* General Rules */
-
-div {
+/* #region General Rules */
+body {
     font-family: 'Metropolis';
-    
 }
 
-p {
-    font-family: 'Proxima Nova';
+.container {
+
 }
 
-.flex-child {
-    flex-direction: 'row';
+.section-title-text {
+    font-size: 75px;
+    line-height: 90px;
+    font-weight: 550;
+    color: black;
 }
 
-/* Scrollbar CSS */
-/* width */
-.scroll-through-left::-webkit-scrollbar {
+.section-subtitle-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(34, 34, 34, 0.66);
+}
+/* #endregion */
+
+/* #region Scrollbar Styling */
+.scroll-through::-webkit-scrollbar {
     height: 5px;
-
 }
 
-.scroll-through-right::-webkit-scrollbar {
-    height: 5px;
-
+.scroll-through::-webkit-scrollbar-thumb {
+    border-left: 10vw solid #ededed;
+    border-right: 10vw solid #ededed;
 }
 
-/* Track */
-.scroll-through::-webkit-scrollbar-track {
-    /* background: rgba(0, 0, 0, 0.2); */
-}
-  
-  /* Handle */
-.cypher-team .scroll-through-left::-webkit-scrollbar-thumb {
+.cypher-team .scroll-through::-webkit-scrollbar-thumb {
     background-color: #00A6FC;
-    border-left: 10vw solid #ededed;
-    border-right: 10vw solid #ededed;
 }
 
-.senior-advisors .scroll-through-right::-webkit-scrollbar-thumb {
+.senior-advisors .scroll-through::-webkit-scrollbar-thumb {
     background: #DD7CFF;
-    border-left: 10vw solid #ededed;
-    border-right: 10vw solid #ededed;
 }
-  
-  /* Handle on hover */
-.cypher-team .scroll-through-left::-webkit-scrollbar-thumb:hover {
+
+.cypher-team .scroll-through::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 186, 252, 0.75);
 }
-.senior-advisors .scroll-through-right::-webkit-scrollbar-thumb:hover {
+.senior-advisors .scroll-through::-webkit-scrollbar-thumb:hover {
     background-color: rgba(221, 124, 255, 0.75);
 }
+/* #endregion */
 
-
-
-/* Buttons CSS */
-
+/* #region Button Styling */
 button {
+    position: relative;
     border-color: black;
-    border-width: 1.5px;
+
     padding: 5px;
     width: 150px;
     font-weight: 450;
-    position: relative;
 }
 
 .black-button {
-    background-color: black;
-    color: white;
-    border-radius: 6px;
+    height: 45px;
     margin-right: 20px;
+    
+    background-color: black;
+    border-radius: 6px;
+    
+    color: white;
+    font-size: 18px;
 }
 
 .white-button {
+    height: 60px;
+    width: 200px;
+    
     background: #FFFFFF;
     border: 3px solid #000000;
     border-radius: 5px;
     box-shadow: 5px 5px #00A6FC;
-
+    
+    font-size: 20px;
 }
 
 .gradient-button {
+    height: 45px;
+    
     background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%);
+    border-radius: 6px;
+    
     color: black;
+    font-size: 18px;
+}
+
+.navbar .gradient-button {
+    width: 100px;
+    height: 50px;
+    
+    background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%);
     border-radius: 6px;
 }
 
-.gradient-button-2 {
+.engage .gradient-button {
+    position: relative;
+    height: 60px;
+    width: 200px;
+    
     background: linear-gradient(85.58deg, #1b6e9b 1.29%, #87599b 74.66%);
     border: 3px solid #000000;
     border-radius: 5px;
-    color: white;
-    position: relative;
     box-shadow: 5px 5px black;
+
+    color: white;
+    font-size: 20px;
 }
 
-/* Navigation Bar CSS */
+.white-button:hover, .engage .gradient-button:hover {
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 0px;
+}
 
-.nav-bar {
-    font-family: 'Proxima Nova';
-    font-weight: 500;
-    font-size: 24px;
+/* #endregion */
+
+/* #region Navigation Bar Section */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 9999;
     position: fixed;
     top: 0;
     width: 100%;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    z-index: 9999;
-    transition: top 0.3s;
-    animation-timing-function: linear;
-    background-color: rgba(0, 0, 0, 0);
     height: 10vh;
-}
-
-.nav-bar-scroll {
+    padding-right: 5vw;
+    padding-left: 5vw;
+    
     font-family: 'Proxima Nova';
     font-weight: 500;
     font-size: 24px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    z-index: 9999;
+  
     transition: top 0.3s;
     animation-timing-function: linear;
+}
+.navbar.clear {
+    background-color: rgba(0, 0, 0, 0);
+}
+.navbar.moving {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(6px);
-    height: 10vh;
 }
-
-.nav-guides {
+.navbar-links-and-buttons {
     display: flex;
-    margin-left: auto;
+    gap: 20px;
 }
-
-.nav-guides .gradient-button {
-    width: 100px;
-    font-weight: 500;
-    margin-left: 15px;
-}
-
 .nav-link {
     color: white !important;
     font-family: 'Proxima Nova';
@@ -147,123 +161,109 @@ button {
     padding: 0.5rem 1.5rem;
     text-decoration: none;
 }
-
-/* Hero Section CSS */
-
-.text {
-    font-size: 75px;
-    line-height: 90px;
-    font-weight: 550;
-    color: black;
+.nav-link:hover{
+    color: rgba(256,256,256,0.6) !important;
 }
+/* #endregion */
 
-.white-text {
-    color: white;
-}
-
-.heroContainer {
+/* #region Hero Section */
+.hero {
     display: flex;
     flex-direction: column;
 }
 
-.heroLogos {
-    background-color: black;
+.hero-main-container {
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    height: 10vh;
-}
-
-#fier {
+    flex-direction: column;
+    
     background-image: url("../assets/images/hero-background-image.png");
     background-size:100%;
-    text-align: right;
-    padding-right: 10vw;
-    display: flex;
-    flex-direction: column;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-    gap: 20px;
+
+    padding: 15vh 10vw 15vh 0;
+    gap: 25px;
     height: 90vh;
-}
 
-.hero-logo-image {
-    height: 40px;
-}
-
-.engage-button {
     text-align: right;
 }
 
-.description {
+.hero-description {
     font-size: 25px;
     color: #E8E8E8;
-    line-height: 15px;
+    line-height: 35px;
     font-weight: 500;
 }
 
-.links {
+.hero-logos {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 10vh;
+    
+    background-color: black;
 }
 
-/* Information Section CSS */
+.hero-logo-image {
+    height: 5vh;
+}
+/* #endregion */
 
+/* #region Information Section */
 .information {
-    text-align: left;
     padding-left: 10vw;
     padding-right: 10vw;
     padding-top: 10vh;
-}
-
-.subtext {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: rgba(34, 34, 34, 0.66);
+    
+    text-align: left;
 }
 
 .bcf-card-container {
     display: flex;
     justify-content: space-between;
+
     padding: 5vw;
     padding-bottom: 10vh;
 }
 
-.bcf-card .card {
-    background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
-    outline: 1px solid #000000;
-    border-radius: 6px;
-    width: 250px;
-    padding: 4px;
-    box-shadow: 5px 5px;
+.bcf-card-container .card {
     display: flex;
     flex-direction: column;
+
+    width: 250px;
+    padding: 4px;
+    
+    background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
+    outline: 1px solid #000000;
+    box-shadow: 5px 5px black;
+    border-radius: 6px;
+
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
-.bcf-card .card-title {
-    font-style: normal;
+.bcf-card-container .card-title {
+    padding-top: 5px;
+    
     font-weight: 700;
     font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: #FFFFFF;
-    padding-top: 5px;;
 }
 
-.bcf-card .card-text {
+.bcf-card-container .card-text {
+    padding: 10px;
+    
     font-family: 'Proxima Nova';
-    font-style: normal;
     font-weight: 400;
     font-size: 22px;
-    line-height: 24px;
-    text-align: center;
-    padding: 10px;
-    color: #FFFFFF;
+}
+/* #endregion */
 
+/* #region Cohort Section */
+
+.flex-container {
+    display: flex;
+    width: 100%
 }
 
-/* Intro Genesis Cohort Section */
 .cohort {
     margin: 5%;
 }
@@ -439,70 +439,86 @@ h1#subtitle-bottom {
     /* color: white; */
     font-size: .75vw;
 }
+/* #endregion */
 
-/* Engage Section CSS */
-
-
-.engage-container {
+/* #region Engage Section */
+.engage {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    
     position: relative;
+    gap: 30px;
+    margin-top: 100px;
 }
 
-.engage-container::before {
+.engage::before {
+    display: block;
+
     position: absolute;
+    z-index: 0;
     left: 0;
     top: 50%;
     height: 50%;
-    background: #ededed;
-    content: "";
     width: 100%;
-    display: block;
+
+    content: "";
+    background: #ededed;
     border-top: 4px solid black;
-    z-index: 0;
 }
 
-.engage-container .card-title {
+.engage .card {
+    padding-top: 20px;
     text-align: center;
+}
+
+.engage .card-title {
     font-size: 36px;
+    font-weight: 600;
 }
 
-.engage-container .card-text {
-    text-align: center;
+.engage .card-text {
+    padding: 15px 8% 10px 8%;
+    
+    font-family: "Proxima Nova";
     font-size: 24px;
+    line-height: normal;
 }
 
-.engage-container .get-involved .card {
+.engage .get-involved.card {
+    width: 25vw;
+    height: 40vh;
+    
     background: linear-gradient(146.6deg, #00A6FC 0%, #DD7CFF 76.96%);
     border: 4px solid #000000;
     border-radius: 9px;
 
     color: rgba(0, 0, 0, 0.68);
-    width: 30vw;
 }
 
-.apply {
+.apply-background {
+    position: relative;
+    padding: 4px;
+    height: 40vh;
+
     background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 76.96%);
     border-radius: 9px;
-    padding: 4px;
-    position: relative;
 }
 
-.engage-container .apply .card {
+.engage .apply.card {
+    width: 45vw;
+    height: calc(40vh - 8px);
+    
     border-radius: 5px;
     background-color: black;
     color: #F5F4F1;
-    width: 50vw;
 }
+/* #endregion */
 
-/* Team Section CSS */
+/* #region Team Section */
 .team {
+    padding: 10vh 0 10vh 0;
+    
     text-align: left;
-    /* padding-left: 10vw;
-    padding-right: 10vw; */
-    padding-top: 10vh;
-    padding-bottom: 10vh;
     background-color: #ededed;
 }
 
@@ -511,179 +527,141 @@ h1#subtitle-bottom {
     padding-right: 10vw;
 }
 
-.subtitle {
-    text-align: right;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 32px;
-
+.subsection-title-text {
+    padding-left: 10vw; /* REDUNDANT */
+    padding-right: 10vw;
+    
     background: linear-gradient(270deg, #00A6FC 15%, #DD7CFF 25%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    padding-left: 10vw;
-    padding-right: 10vw;
+    
+    text-align: right;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
 }
 
-.scroll-through-left {
+.scroll-through {
     min-width: 100%;
+    gap: 50px;
     overflow-x: scroll !important;
     overflow-y: hidden;
     padding-left: 10vw;
     padding-right: 10vw;
+
  
     margin-top: 2vh;
     margin-bottom: 5vh;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
-.scroll-through-right {
-    min-width: 100%;
-    overflow-x: scroll !important;
-    overflow-y: hidden;
-    padding-right: 10vw;
-    padding-left: 10vw;
- 
-    margin-top: 2vh;
-    margin-bottom: 5vh;
-
-    display: flex;
+.senior-advisors .scroll-through {
     flex-direction: row-reverse;
 }
 
-.cypher-team .card {
+.team .card {
     width: 15vw;
     height: 15vw;
-    font-family: 'Proxima Nova';
-    border: 2px solid black;
-    border-radius: 6px;
-    margin-right: 40px;
     padding: 2%;
-    
+
+    border-radius: 6px;
+
+    font-family: 'Proxima Nova';
+}
+
+.cypher-team .card { 
+    border: 2px solid black;
+    box-shadow: 5px 5px #00A6FC;
+    background-color: white;
+    color: black;
 }
 
 .senior-advisors .card {
-    width: 15vw;
-    height: 15vw;
-    font-family: 'Proxima Nova';
-    border: 2px solid black;
-    border-radius: 6px;
-    margin-left: 40px;
-    margin-right: 5px;
-    padding: 2%;
-    
+    border: 2px solid white;
+    box-shadow: 5px 5px #DD7CFF;
+    background-color: black;
+    color: white;
 }
 
 .team .card-body {
     display: flex;
     flex-direction: column;
     flex: 1;
-}
 
-.cypher-team .card {
-    box-shadow: 5px 5px #00A6FC;
-}
-
-.senior-advisors .card {
-    border: 2px solid white;
-    box-shadow: 5px 5px #DD7CFF;
+    text-align: left;
 }
 
 .team .card-title {
-    text-align: left;
     font-size: 18px;
     font-weight: 700;
 }
 
+.team .card-subtitle {
+    font-size: 13px;
+    font-weight: lighter;
+}
+
 .team .card-img {
-    height: 5vh;
-    width: 5vh;
+    height: 8vh;
+    width: 8vh;
+    margin-bottom: 10px;
+
+    border: solid 3px #F3F4F5;
+    border-radius: 50%;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-evenly;
+    
+    margin-top: auto;
 }
 
 .cypher-team .card-subtitle {
     color:rgba(0, 0, 0, 0.8);
-    font-size: 13px;
-    text-align: left;
-    font-weight: lighter;
 }
 
 .senior-advisors .card-subtitle {
-    color:white;
-    font-size: 13px;
-    text-align: left;
-    font-weight: lighter;
-}
-
-.cypher-team .card {
-    background-color: white;
-    color: black;
-}
-
-.senior-advisors .card {
-    background-color: black;
-    color: white;
-}
-
-.scroll-cushion {
-    height: 20px;
-}
-
-.slider-container-left {
-    /* padding-left: 10vw; */
-}
-
-.slider-container-right {
-    /* padding-right: 10vw; */
-}
-
-.team .card-img {
-    width: 70px;
-    height: 70px;
-    border: solid 3px #F3F4F5;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    color:rgba(256, 256, 256, 0.8);
 }
 
 .cypher-team .card-img {
     border: solid 3px rgba(34, 34, 34, 0.66);
 }
 
-.card-icons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: auto;
+.scroll-cushion {
+    height: 20px;
 }
 
-/* Title Section CSS */
-.title {
-    position: relative;
-    text-align: right;
-    padding-right: 5%;
+#jeff_amico {
+    margin-right: 5px;
 }
 
-.flex-container {
-    display: flex;
-    width: 100%
+#catrina_wang {
+    margin-right: 5px;
 }
+/* #endregion */
 
-
-
-/* Corporate Partners Section */
+/* #region Corporate Partners Section */
 .partners {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
     background: #222222;
 }
 
-.partners .subtitle {
+.partners .subsection-title-text {
+    margin-bottom: 25px;
+    
     background: linear-gradient(270deg, #00A6FC 40%, #DD7CFF 60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
     text-align: center;
-    margin-bottom: 25px;
 }
 
 .partner-logo {
@@ -695,11 +673,6 @@ h1#subtitle-bottom {
     opacity: 1;
 }
 
-.partners {
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
 .partners > div > div:nth-child(1) {
     padding-top: 2.5%;
     padding-bottom: 2.5%;
@@ -708,36 +681,33 @@ h1#subtitle-bottom {
 .partners > div > div:nth-child(2) {
     padding-top: 2.5%;
 }
+/* #endregion */
 
-/* Footer Section */
+/* #region Footer Section */
 .footer {
+    padding: 1% 2% 0 1%;
+    
     background-color: black;
     color: white;
-    /* padding: 1%; */
-    padding-top: 1%;
-    padding-right: 1%;
-    padding-left: 1%;
 }
 
 .footer > div > div:nth-child(2) > a {
     color: white;
-    vertical-align: middle;
 }
 
-.flex-child#footer-left {
+.flex-child {
+    width: 50%;
+}
+
+.flex-child.footer-left {
     text-align: left;
-    width: 50%;
 }
-.flex-child#footer-right {
+.flex-child.footer-right {
     text-align: right;
-    width: 50%;
+    align-self: center;
 }
 
-#footer-right > a:nth-child(6) {
+.footer-right > a:nth-child(4) {
     padding-right: 2.5%;
 }
-#footer-right > svg:nth-child(7) {
-    margin-right: 1%;
-}
-
-
+/* #endregion */
