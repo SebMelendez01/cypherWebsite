@@ -14,7 +14,7 @@ function Member(props) {
 
     return (
         <div>
-            <Card>
+            <Card id={data.Image}>
                 <Card.Body>
                     <Card.Img src={type === 'Cypher' ? require(`../assets/images/cypher-team/${data.Image}.png`) : require(`../assets/images/advisors/${data.Image}.png`)}></Card.Img>
                     <Card.Title>{name}</Card.Title>

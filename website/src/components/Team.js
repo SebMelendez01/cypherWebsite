@@ -1,8 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import Member from './Member'
+
 import CypherTeam from '../assets/cypher-team.json'
 import Advisors from '../assets/advisors.json'
+import "bootstrap/dist/css/bootstrap.min.css";
 import './Component.css';
 
 function Team() {
@@ -17,22 +18,18 @@ function Team() {
     }
     
     return (
-        <div className="team" id="team">
+        <div className="team">
             <div className="team-text">
-                <div className="subtext">WE ARE HERE TO HELP.</div>
-                <div className="text">Meet Our Team.</div>
+                <div className="section-subtitle-text">WE ARE HERE TO HELP.</div>
+                <div className="section-title-text">Meet Our Team.</div>
             </div>
             <div className="cypher-team">
-                <div className="subtitle">Cypher Managers</div>
-                <div className="slider-container-left">
-                    <div className="scroll-through-left">{CypherTeamMembers}</div>
-                </div>
+                <div className="subsection-title-text">Cypher Managers</div>
+                <div className="scroll-through">{CypherTeamMembers}</div>
             </div>
             <div className="senior-advisors">
-                <div className="subtitle">Senior Advisors</div>
-                <div className="slider-container-right">
-                    <div className="scroll-through-right">{AdvisorMembers}</div>
-                </div>
+                <div className="subsection-title-text">Senior Advisors</div>
+                <div className="scroll-through">{AdvisorMembers}</div>
             </div>
         </div>
     )
