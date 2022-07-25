@@ -49,8 +49,8 @@ function Cohort() {
         </div>
         <div className='flex-child' id='intro-right'>
           <div className="title">
-            <div class="subtext">WE ACCEPT COMPANIES FROM ALL OVER THE WORLD.</div>
-            <div class="text">Meet Our Genesis <br/> Cohort.</div>
+            <div className="subtext">WE ACCEPT COMPANIES FROM ALL OVER THE WORLD.</div>
+            <div className="text">Meet Our Genesis <br/> Cohort.</div>
           </div>
           <div className='map'>
             <Map/>

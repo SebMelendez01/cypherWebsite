@@ -1,46 +1,19 @@
-import DottedMap from "dotted-map";
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip'
-import Badge from 'react-bootstrap/Badge'
 
 import mapInfo from '../assets/map.json';
-import cohortInfo from '../assets/cohort.json'
 import {MyVerticallyCenteredModal} from './Company'
 import './Component.css';
-import React, {useState, useRef, useEffect} from "react";
+import React, {useState} from "react";
 
 
 function LocationModal(props) {
   const location = mapInfo[props.location];
-  const [index, setIndex] = useState(0);
   const [modalShow, setModalShow] = useState(false);
 
-
-  // const data = cohortInfo;
-  // 
-  const tags = cohortInfo[location.Companies[index]].tags.map((tag) =>
-    <Badge pill key={tag} style={{backgroundColor: cohortInfo[location.Companies[index]].color, color: 'black'}} bg="">
-      {tag}
-    </Badge>
-  );
-
-  function handleClick() {
-    setIndex(index + 1); 
-    if(index >= location.Companies.length - 1) {
-      setIndex(0);
-    }
-  }
-
-  // const companies = location.Companies.map(company => {
-    
-  //   return <MyVerticallyCenteredModal
-  //         show={modalShow}
-  //         onHide={() => setModalShow(false)}
-  //         company = {company}
-  //         tags={tags}
-  //         style={{ marginTop: `500px` }}
-  //       />
-  // })
+  // const tags = cohortInfo[location.Companies[index]].tags.map((tag) =>
+  //   <Badge pill key={tag} style={{backgroundColor: cohortInfo[location.Companies[index]].color, color: 'black'}} bg="">
+  //     {tag}
+  //   </Badge>
+  // );
 
   return (
        <svg>
@@ -51,19 +24,8 @@ function LocationModal(props) {
         <MyVerticallyCenteredModal
           show={modalShow}
           onHide={() => setModalShow(false)}
-          company = {location.Companies[index]}
-          tags={tags}
-          nextButton={true}
-          companyArray={location.Companies}
+          companyarray={location.Companies}
         />
-        {/* <div>{companies}</div>  */}
-        {/* <MyVerticallyCenteredModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-          company = {location.Companies[0]}
-          tags={tags}
-        /> */}
-
       </svg>
   );
 }

@@ -1,6 +1,5 @@
 {
     "Cowboy Labs" : {
-        "LinkedIn" : "https://www.linkedin.com/",
         "Twitter" : "https://twitter.com/CowboyLabs",
         "logo" : "Cowboy_Labs",
         "description" : "Cowboy Labs is a SaaS and product partnership company offering tools & services to make blockchain easy & scalable. Shifting from NFT consulting services to SaaS tooling, Cowboy Labs is primed to take the web3 world by storm.",
@@ -11,11 +10,8 @@
         ]
     },
     "Protego" : {
-        "LinkedIn" : "https://www.linkedin.com/",
-        "Twitter" : "https://twitter.com/",
         "logo" : "Protego",
         "description" : "A decentralized trust & safety protocol to assess the risk of any interaction on any blockchain.",
-        "website" : "google.com",
         "color" : "#7E74F1",
         "tags" : [
             "Security"
@@ -44,7 +40,6 @@
         ]
     }, 
     "Carv" : {
-        "LinkedIn" : "https://www.linkedin.com/",
         "Twitter" : "https://twitter.com/carv_official",
         "logo" : "Carv",
         "description" : "Building a credential issuing protocol for web3 gaming citizens, enabling credential-driven benefits and interoperability across the gaming metaverse.",
@@ -99,7 +94,6 @@
         ]
     },
     "Metaverse AI" : {
-        "LinkedIn" : "https://www.linkedin.com/",
         "Twitter" : "https://twitter.com/metaverseOrg",
         "logo" : "Metaverse_AI",
         "description" : "Building the open metaverse with AI-powered virtual humans, digital celebrities & web3 applications.",

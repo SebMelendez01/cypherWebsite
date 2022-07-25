@@ -13,20 +13,35 @@ import { Button } from 'react-bootstrap';
 
 // https://react-bootstrap.github.io/components/modal/
 export function MyVerticallyCenteredModal(props) {
-  const [name, setName]= useState(props.company);
-  const [index, setIndex] = useState(1);
-
   const data = cohort;
+  const styles = {
+    border: '2px solid black',
+    borderRadius : '4px',
+    backgroundColor : 'white',
+  };  
 
-
-  function handleClick() {
-    setIndex(index + 1); 
-    if(index >= props.companyArray.length - 1) {
-      setIndex(0);
-    }
-    setName(props.companyArray[index])
-  }
-  
+  const companies = props.companyarray.map((company, index) =>
+    <div className='flex-container' style={styles}>
+      <div className='flex-child' id='popup-img'>
+        <span className="helper"></span>
+        <img src={require(`../assets/images/companies/${cohort[company].logo}.png`)} alt=''/>
+      </div>
+      <div className='flex-child' id='popup-modal'>
+        <Modal.Header closeButton={index === 0}>
+          <Modal.Title id="contained-modal-title-vcenter">{company}</Modal.Title>
+          <div>{props.tags}</div>
+        </Modal.Header>
+        <Modal.Body>
+          <p>{cohort[company].description}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          {data[company].website && <a href={data[company].website}> <TbWorld size={30}/></a>}
+          {data[company].LinkedIn && <a href={data[company].LinkedIn}><FaLinkedin size={30}/></a>}
+          {data[company].Twitter && <a href={data[company].Twitter}><FaTwitterSquare size={30}/></a>}
+        </Modal.Footer>
+      </div>
+    </div>
+  )
   
   return (
     <Modal
@@ -35,27 +50,7 @@ export function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <div className='flex-container'>
-        <div className='flex-child' id='popup-img'>
-          <span className="helper"></span>
-          <img src={require(`../assets/images/companies/${cohort[name].logo}.png`)} alt=''/>
-        </div>
-        <div className='flex-child' id='popup-modal'>
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">{name}</Modal.Title>
-            <div>{!props.nextButton && props.tags}</div>
-          </Modal.Header>
-          <Modal.Body>
-            <p>{cohort[name].description}</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <a href={data[name].website}> <TbWorld size={30}/></a>
-            <a href={data[name].LinkedIn}><FaLinkedin size={30}/></a>
-            <a href={data[name].Twitter}><FaTwitterSquare size={30}/></a>
-            {props.nextButton && props.companyArray.length > 1 && <Button onClick={() => {handleClick()}} style={{ maxWidth:'25%', color:'white', backgroundColor: 'black'}} variant="">Next</Button>}
-          </Modal.Footer>
-        </div>
-      </div>
+      <div>{companies}</div>
     </Modal>
   );
 }
@@ -89,8 +84,8 @@ export function Company(props) {
                   <div>{tags}</div>            
                 </div>
                 <div className='flex-child' id='company-links'>
-                  <a href={data[name].LinkedIn}><FaLinkedin size={30}/></a>
-                  <a href={data[name].Twitter}><FaTwitterSquare size={30}/></a> 
+                  {data[name].website && <a href={data[name].website}> <TbWorld size={30}/></a>}
+                  {data[name].Twitter && <a href={data[name].Twitter}><FaTwitterSquare size={30}/></a>}
                 </div>
               </div>
             </div>
@@ -104,7 +99,7 @@ export function Company(props) {
         onHide={() => setModalShow(false)}
         company = {name}
         tags={tags}
-        nextbutton={false}
+        companyarray={[name]}
       />
       
     </div>
