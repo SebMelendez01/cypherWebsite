@@ -458,6 +458,26 @@ h1#subtitle-bottom {
     text-align: center;
 }
 
+@keyframes frontTransition {
+from {
+    r: 6;
+    fill: #00A6FC;
+}
+to {
+    r: 10;
+    fill: #000000;
+}
+
+}
+.front:hover {
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-name: frontTransition;
+    r: 10;
+    fill: #000000;
+    cursor: pointer;
+}
+
 /* Company Grid */
 .company {
     margin-top: 10%;
@@ -467,23 +487,24 @@ h1#subtitle-bottom {
 }
 /* Company Cards */
 .company-card {
+    width: 255px;
+    height: auto;
     outline: 2px solid black;
     box-shadow: 5px 5px;
-    margin-right: 5%;
-    margin-left: 10%;
 }
 .company-card:hover {
     top: 5px;
     left: 5px;
     box-shadow: 0px 0px;
+    cursor: pointer;
 }
 .flex-child#company-logo > img{
-    width:90%;
+    width:65px;
     background-color: black;
-    border-radius: 5%;
+    border-radius: 5px;
 }
 #company-info {
-    margin-left: 5%;
+    margin-left: 10px;
 }
 .helper {
     display: inline-block;
@@ -496,22 +517,35 @@ h1#subtitle-bottom {
 }
 .flex-child#company-info .card-title{
     text-align: left;
-    font-size: 1.25vw;
+    font-size: 16.5px; /* Card should not resize*/
 }
-.flex-child#company-links a svg{
-    color: black;
-    width: 40%;
-    margin: 5%;
-    /* align-content: flex-end; */
-    
+
+#test {
+    width: 150px;
 }
-#tags > div > span {
-    font-size: .75vw;
+
+#tags {
+    width: auto;
+    float: left;
+}
+#company-links {
+    width: 100%;
+}
+#company-links > div {
+    float: right;
+}
+
+#company-links > div > a > svg{
+    color: black; 
 }
 
 /* Popup Company Description */
+
+body > div.fade.modal.show > div > div {
+    background-color: transparent;
+    border: transparent;
+}
 .flex-child#popup-modal {
-    /* background-color: #222222; */
     width: 60%;
 }
 .model-title {

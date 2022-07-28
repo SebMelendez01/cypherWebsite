@@ -1,7 +1,7 @@
 {
     "Cowboy Labs" : {
-        "LinkedIn" : "https://www.linkedin.com/",
         "Twitter" : "https://twitter.com/CowboyLabs",
+        "location" : "Miami, Florida",
         "logo" : "Cowboy_Labs",
         "description" : "Cowboy Labs is a SaaS and product partnership company offering tools & services to make blockchain easy & scalable. Shifting from NFT consulting services to SaaS tooling, Cowboy Labs is primed to take the web3 world by storm.",
         "website" : "cowboylabs.xyz",
@@ -11,11 +11,9 @@
         ]
     },
     "Protego" : {
-        "LinkedIn" : "https://www.linkedin.com/",
-        "Twitter" : "https://twitter.com/",
         "logo" : "Protego",
+        "location" : "San Francisco, California",
         "description" : "A decentralized trust & safety protocol to assess the risk of any interaction on any blockchain.",
-        "website" : "google.com",
         "color" : "#7E74F1",
         "tags" : [
             "Security"
@@ -24,6 +22,7 @@
     "Roofstock" : {
         "LinkedIn" : "https://www.linkedin.com/company/roofstock/",
         "Twitter" : "https://twitter.com/rsonchain",
+        "location" : "Oakland California",
         "logo" : "Roofstock",
         "description" : "Radically simplifying single family rental investments.",
         "website" : "https://www.roofstock.com/",
@@ -35,6 +34,7 @@
     "VIA" : {
         "LinkedIn" : "https://www.linkedin.com/company/solvewithvia/",
         "Twitter" : "https://twitter.com/solvewithvia",
+        "location" : "Boston, Massachusetts",
         "logo" : "VIA",
         "description" : "Making communities cleaner and safer by bringing AI everywhere.",
         "website" : "https://www.solvewithvia.com/",
@@ -44,8 +44,8 @@
         ]
     }, 
     "Carv" : {
-        "LinkedIn" : "https://www.linkedin.com/",
         "Twitter" : "https://twitter.com/carv_official",
+        "location" : "Singapore, Singapore",
         "logo" : "Carv",
         "description" : "Building a credential issuing protocol for web3 gaming citizens, enabling credential-driven benefits and interoperability across the gaming metaverse.",
         "website" : "https://carv.io/",
@@ -57,6 +57,7 @@
     "VO2" : {
         "LinkedIn" : "https://www.linkedin.com/company/vo-two/",
         "Twitter" : "https://twitter.com/VO2_fans",
+        "location" : "Philadelphia, Pennsylvania",
         "logo" : "VO2",
         "description" : "Be more than a fan.",
         "website" : "https://www.vo2.fans/",
@@ -68,6 +69,7 @@
     "Ensuro" : {
         "LinkedIn" : "https://www.linkedin.com/company/ensuro/",
         "Twitter" : "https://twitter.com/Ensuroproject",
+        "location" : "Singapore, Singapore",
         "logo" : "Ensuro",
         "description" : "A decentralized capital provider for insurance risk.",
         "website" : "https://ensuro.co/",
@@ -79,6 +81,7 @@
     "Portabl" : {
         "LinkedIn" : "https://www.linkedin.com/company/getportabl/",
         "Twitter" : "https://twitter.com/getportabl",
+        "location" : "Philadelphia, Pennsylvania",
         "logo" : "Portabl",
         "description" : "Universal financial identity for all.",
         "website" : "https://portabl.io/",
@@ -90,6 +93,7 @@
     "TYDEi" : {
         "LinkedIn" : "https://www.linkedin.com/company/tydeihealth/",
         "Twitter" : "https://twitter.com/tydeihealth",
+        "location" : "Hartford, Connecticut",
         "logo" : "TYDEi",
         "description" : "Solving complex business problems in healthcare through our low-code, smart contract-enabled service platform.",
         "website" : "https://tydei.io/",
@@ -99,8 +103,8 @@
         ]
     },
     "Metaverse AI" : {
-        "LinkedIn" : "https://www.linkedin.com/",
         "Twitter" : "https://twitter.com/metaverseOrg",
+        "location" : "San Francisco, California",
         "logo" : "Metaverse_AI",
         "description" : "Building the open metaverse with AI-powered virtual humans, digital celebrities & web3 applications.",
         "website" : "https://www.metaverseai.org/",

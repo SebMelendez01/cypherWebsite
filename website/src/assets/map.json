@@ -1,0 +1,32 @@
+{
+    "Boston, Massachusetts" : {
+        "Companies" : ["VIA"],
+        "x" : 402, 
+        "y" : 480
+    }, 
+    "Miami, Florida" : {
+        "Companies" : ["Cowboy Labs"],
+        "x" : 355,
+        "y" : 552
+    },
+    "San Francisco Bay Area, California" : {
+        "Companies" : ["Roofstock", "Protego", "Metaverse AI"],
+        "x" : 204,
+        "y" : 504
+    }, 
+    "Hartford, Connecticut" : {
+        "Companies" : ["TYDEi"],
+        "x" : 389,
+        "y" : 492
+    }, 
+    "Philadelphia, Pennsylvania" : {
+        "Companies" : ["VO2", "Portabl"],
+        "x" : 377,
+        "y" : 504
+    }, 
+    "Singapore, Singapore" : {
+        "Companies" : ["Ensuro", "Carv"],
+        "x" : 1048,
+        "y" : 685
+    }
+}
