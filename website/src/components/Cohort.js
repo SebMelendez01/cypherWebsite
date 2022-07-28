@@ -7,9 +7,6 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
-
 import quotes from '../assets/quotes.json'
 
 function Cohort() {

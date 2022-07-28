@@ -5,9 +5,6 @@ import { TbWorld } from 'react-icons/tb'
 import Badge from 'react-bootstrap/Badge'
 import Modal from 'react-bootstrap/Modal'
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
-
 import cohort from '../assets/cohort.json'
 
 // https://react-bootstrap.github.io/components/modal/

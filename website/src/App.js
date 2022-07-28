@@ -8,7 +8,12 @@ import Cohort from './components/Cohort';
 import Footer from './components/Footer';
 import Partners from './components/Partners';
 
+import "bootstrap/dist/css/bootstrap.min.css"
+import './components/Component.css';
+
 function App() {
+  
+  
   return (
     <div className="App">
       {/* <header className="App-header">

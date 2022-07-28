@@ -3,18 +3,16 @@ import Member from './Member'
 
 import CypherTeam from '../assets/cypher-team.json'
 import Advisors from '../assets/advisors.json'
-import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
 
 function Team() {
     const CypherTeamMembers = [];
     const AdvisorMembers = [];
 
     for (var key in CypherTeam) {
-        CypherTeamMembers.push(<Member name={key} type="Cypher" data={CypherTeam[key]}></Member>)
+        CypherTeamMembers.push(<Member name={key} key={key} type="Cypher" data={CypherTeam[key]}></Member>)
     }
     for (var key in Advisors) {
-        AdvisorMembers.push(<Member name={key} type="Advisor" data={Advisors[key]}></Member>)
+        AdvisorMembers.push(<Member name={key} key={key} type="Advisor" data={Advisors[key]}></Member>)
     }
     
     return (

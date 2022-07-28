@@ -1,7 +1,7 @@
 import DottedMap from "dotted-map";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip'
-import './Component.css';
+
 import React from "react";
 
 const Map = () => {

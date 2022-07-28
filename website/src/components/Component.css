@@ -2,18 +2,15 @@
 body {
     font-family: 'Metropolis';
 }
-
 .container {
 
 }
-
 .section-title-text {
     font-size: 75px;
     line-height: 90px;
     font-weight: 550;
     color: black;
 }
-
 .section-subtitle-text {
     font-style: normal;
     font-weight: 700;
@@ -23,24 +20,22 @@ body {
 }
 /* #endregion */
 
+/* ––––––––––––––– */
+
 /* #region Scrollbar Styling */
 .scroll-through::-webkit-scrollbar {
     height: 5px;
 }
-
 .scroll-through::-webkit-scrollbar-thumb {
     border-left: 10vw solid #ededed;
     border-right: 10vw solid #ededed;
 }
-
 .cypher-team .scroll-through::-webkit-scrollbar-thumb {
     background-color: #00A6FC;
 }
-
 .senior-advisors .scroll-through::-webkit-scrollbar-thumb {
     background: #DD7CFF;
 }
-
 .cypher-team .scroll-through::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 186, 252, 0.75);
 }
@@ -58,72 +53,108 @@ button {
     width: 150px;
     font-weight: 450;
 }
-
 .black-button {
     height: 45px;
     margin-right: 20px;
+    overflow: hidden;
     
     background-color: black;
     border-radius: 6px;
     
     color: white;
     font-size: 18px;
-}
 
+    transition: 0.5s;
+    background: linear-gradient(white,white) no-repeat, black;
+    background-size: 0% 100%;
+    background-position:center;
+}
 .white-button {
+    --box-shadow-color: black;
     height: 60px;
     width: 200px;
     
     background: #FFFFFF;
     border: 3px solid #000000;
     border-radius: 5px;
-    box-shadow: 5px 5px #00A6FC;
+    box-shadow: 5px 5px var(--box-shadow-color);
     
     font-size: 20px;
-}
 
-.gradient-button {
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transition-property: --box-shadow-color;
+}
+.hero .gradient-button {
     height: 45px;
     
-    background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%);
+    background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%) no-repeat, white;
     border-radius: 6px;
     
     color: black;
     font-size: 18px;
-}
 
+    transition: 0.5s;
+    background-size: 100% 100%;
+    background-position:center;
+}
 .navbar .gradient-button {
     width: 100px;
     height: 50px;
+
+    font-size: 18px;
     
     background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%);
     border-radius: 6px;
-}
 
+    font-family: "Metropolis";
+}
 .engage .gradient-button {
     position: relative;
+    background-size: 200% 100%;
+    background-position: right;
     height: 60px;
     width: 200px;
     
-    background: linear-gradient(85.58deg, #1b6e9b 1.29%, #87599b 74.66%);
+    background-image: linear-gradient(to right, #1b6e9b 1.29%, #87599b 50%, white 50%, white 100%);
     border: 3px solid #000000;
     border-radius: 5px;
     box-shadow: 5px 5px black;
 
-    color: white;
+    color: black;
     font-size: 20px;
-}
 
+    transition: 0.5s;
+    transition-property: background-position, color;
+}
 .white-button:hover, .engage .gradient-button:hover {
     top: 5px;
     left: 5px;
     box-shadow: 0px 0px;
 }
+.black-button:hover {
+    font-size: 20px;
+    background-size: 100% 100%;
+    color: black;
+}
+.hero .gradient-button:hover {
+    font-size: 20px;
+    background-size: 0% 100%;
+}
+.engage:hover .gradient-button {
+    background-position: left;
+    color: white;
+}
+.engage:hover .white-button {
+    --box-shadow-color: #00A6FC;
+}
 
 /* #endregion */
 
+/* ––––––––––––––– */
+
 /* #region Navigation Bar Section */
-.navbar {
+.navbar#navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -139,16 +170,19 @@ button {
     font-family: 'Proxima Nova';
     font-weight: 500;
     font-size: 24px;
-  
-    transition: top 0.3s;
-    animation-timing-function: linear;
+
+    transition: all 0.5s;
 }
-.navbar.clear {
+.clear {
     background-color: rgba(0, 0, 0, 0);
+
+    transition: background-color 0.1s ease-out;
 }
-.navbar.moving {
+.moving {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(6px);
+
+    transition: background-color 0.1s ease-out;
 }
 .navbar-links-and-buttons {
     display: flex;
@@ -171,7 +205,6 @@ button {
     display: flex;
     flex-direction: column;
 }
-
 .hero-main-container {
     display: flex;
     flex-direction: column;
@@ -185,14 +218,13 @@ button {
 
     text-align: right;
 }
-
 .hero-description {
     font-size: 25px;
     color: #E8E8E8;
     line-height: 35px;
     font-weight: 500;
+    
 }
-
 .hero-logos {
     display: flex;
     align-items: center;
@@ -201,7 +233,6 @@ button {
     
     background-color: black;
 }
-
 .hero-logo-image {
     height: 5vh;
 }
@@ -215,72 +246,168 @@ button {
     
     text-align: left;
 }
-
-.bcf-card-container {
+.bcf-cards-container {
     display: flex;
     justify-content: space-between;
 
     padding: 5vw;
     padding-bottom: 10vh;
 }
-
-.bcf-card-container .card {
+.bcf-flip-card-container {
+    background-color: transparent;
+    width: 250px;
+    height: 325px;
+    perspective: 1000px;
+}
+.bcf-flip-card-positioner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+.bcf-flip-card-front, .bcf-flip-card-back {
     display: flex;
     flex-direction: column;
-
-    width: 250px;
     padding: 4px;
-    
-    background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
-    outline: 1px solid #000000;
-    box-shadow: 5px 5px black;
+    border: 1px solid #000000;
     border-radius: 6px;
-
     line-height: 24px;
     text-align: center;
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.bcf-flip-card-front {
+    box-shadow: 5px 5px black;
+    background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
     color: #FFFFFF;
 }
-
-.bcf-card-container .card-title {
+.bcf-flip-card-container:hover .bcf-flip-card-positioner {
+    animation: container-animation-forwards 1s ease forwards;
+}
+.bcf-flip-card-container:hover .bcf-flip-card-front {
+    animation: card-animation-forwards 1s ease forwards;
+}
+.was-hovered-container {
+    animation: container-animation-backwards 1s ease forwards;
+}
+.was-hovered-card-front {
+    animation: card-animation-backwards 1s ease forwards;
+}
+.bcf-flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 4px 0px 4px 0px;
+}
+.bcf-cards-container .card-title {
     padding-top: 5px;
     
     font-weight: 700;
     font-size: 24px;
 }
-
-.bcf-card-container .card-text {
+.bcf-flip-card-back .card-title {
+    background: linear-gradient(270deg, #00A6FC 40%, #DD7CFF 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bcf-cards-container .card-text {
     padding: 10px;
     
     font-family: 'Proxima Nova';
     font-weight: 400;
     font-size: 22px;
 }
+@keyframes card-animation-forwards {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    33% {
+        transform: translateX(5px) translateY(5px);
+        box-shadow: none;
+    }
+    100% {
+        transform: translateX(5px) translateY(5px);
+        box-shadow: none;
+    }
+}
+@keyframes card-animation-backwards {
+    0% {
+        transform: translateX(5px) translateY(5px);
+        box-shadow: none;
+    }
+    67% {
+        transform: translateX(5px) translateY(5px);
+        box-shadow: none;
+    }
+    100% {
+        transform: translateX(0px) translateY(0px);
+        box-shadow: 5px 5px black;
+    }
+}
+@keyframes container-animation-forwards {
+    0% {
+        transform: translateX(0px) translateY(0px) rotateY(0deg);
+    }
+    33% {
+        transform: translateX(5px) translateY(5px) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(5px) translateY(5px) rotateY(180deg);
+    }
+}
+@keyframes container-animation-backwards {
+    0% {
+        transform: translateX(5px) translateY(5px) rotateY(180deg);
+    }
+    67% {
+        transform: translateX(5px) translateY(5px) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) rotateY(0deg);
+    }
+}
+.list-group {
+    
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    padding: 0px;
+}
+.list-group-item {
+    background: black;
+    color: white;
+    border: 2px;
+    border-bottom: white;
+}
+
 /* #endregion */
 
 /* #region Cohort Section */
-
 .flex-container {
     display: flex;
     width: 100%
 }
-
 .cohort {
     margin: 5%;
 }
-
 .card-body#quote-body {
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 5%;
 }
-
 .flex-child#intro-right, .flex-child#card-right  {
     width: 60%;
     margin-left: auto; 
     margin-right: 0;   
     text-align: right; 
 }
-
 .flex-child#card-right {
     align-self: flex-end;
 }
@@ -290,27 +417,22 @@ button {
 .flex-child#card-right > .card-subtitle {
     font-size: 1.25vw;
 }
-
 p#subtitle-top {
     font-size: 1vw;
 }
-
 h1#subtitle-bottom {
     font-size: 6vw;
 }
-
 #quote-card {
     width: 35%;
     margin-top: 10%;
     display: grid;
     grid-template: 1fr / 1fr;
 }
-
 #quote-card > * {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
-
 .background-box {
     height: 50%;
     width: 100%;
@@ -320,22 +442,18 @@ h1#subtitle-bottom {
     background: linear-gradient(71.24deg, #00A6FC 0%, #DD7CFF 98.86%);;
     z-index: 1;
 }
-
 #quote-card > .card {
     height: 50%;
     outline: 2px solid black;
     z-index: 2;
 }
-
 .card-text#quote-text {
     margin-top: 5%;
     font-size: 1.5vw;
 }
-
 .flex-child#card-left > img{
     width: 7vw;
 }
-
 .map {
     text-align: center;
 }
@@ -344,11 +462,9 @@ h1#subtitle-bottom {
 .company {
     margin-top: 10%;
 }
-
 .cohort-grid {
     margin-top: -10%;
 }
-
 /* Company Cards */
 .company-card {
     outline: 2px solid black;
@@ -356,40 +472,32 @@ h1#subtitle-bottom {
     margin-right: 5%;
     margin-left: 10%;
 }
-
 .company-card:hover {
     top: 5px;
     left: 5px;
     box-shadow: 0px 0px;
 }
-
 .flex-child#company-logo > img{
     width:90%;
     background-color: black;
     border-radius: 5%;
 }
-
 #company-info {
     margin-left: 5%;
 }
-
 .helper {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
-
 .flex-child#company-logo {
     width: 30%;
     vertical-align: middle;
 }
-
 .flex-child#company-info .card-title{
     text-align: left;
     font-size: 1.25vw;
 }
-
-
 .flex-child#company-links a svg{
     color: black;
     width: 40%;
@@ -397,7 +505,6 @@ h1#subtitle-bottom {
     /* align-content: flex-end; */
     
 }
-
 #tags > div > span {
     font-size: .75vw;
 }
@@ -407,15 +514,12 @@ h1#subtitle-bottom {
     /* background-color: #222222; */
     width: 60%;
 }
-
 .model-title {
     padding-right: 10%;
 }
-
 #popup-modal > div.modal-header > div:nth-child(2) {
     margin-left: 10px;
 }
-
 .flex-child#popup-img {
     width: 40%;
     vertical-align: middle;
@@ -426,15 +530,12 @@ h1#subtitle-bottom {
     border-radius: 5px;
     background-color: black;
 }
-
 #popup-modal > div.modal-footer > a {
     color: black;
 }
-
 #popup-modal > div.modal-body > p {
     font-size: 90%;
 }
-
 #popup-modal > div.modal-body > p {
     /* color: white; */
     font-size: .75vw;
@@ -450,7 +551,6 @@ h1#subtitle-bottom {
     gap: 30px;
     margin-top: 100px;
 }
-
 .engage::before {
     display: block;
 
@@ -465,17 +565,14 @@ h1#subtitle-bottom {
     background: #ededed;
     border-top: 4px solid black;
 }
-
 .engage .card {
     padding-top: 20px;
     text-align: center;
 }
-
 .engage .card-title {
     font-size: 36px;
     font-weight: 600;
 }
-
 .engage .card-text {
     padding: 15px 8% 10px 8%;
     
@@ -483,27 +580,33 @@ h1#subtitle-bottom {
     font-size: 24px;
     line-height: normal;
 }
-
 .engage .get-involved.card {
     width: 25vw;
     height: 40vh;
     
-    background: linear-gradient(146.6deg, #00A6FC 0%, #DD7CFF 76.96%);
+    background: linear-gradient(to top right, #00A6FC 0%, #DD7CFF 38%,  #DD7CFF 50%, #000000 50%, #000000 100%);
     border: 4px solid #000000;
     border-radius: 9px;
 
-    color: rgba(0, 0, 0, 0.68);
+    transition: 1s;
+    background-size: 200% 200%;
+    background-position: top right;
+    color: white;
+    
 }
-
 .apply-background {
     position: relative;
     padding: 4px;
     height: 40vh;
 
-    background: linear-gradient(270deg, #00A6FC 0%, #DD7CFF 76.96%);
     border-radius: 9px;
-}
 
+    transition: background-position 1s;
+    background-size: 200% 200%;
+    
+    background-image: linear-gradient(to right, #00A6FC 0%, #DD7CFF 38%,  #DD7CFF 50%, #000000 50%, #000000 100%);
+    background-position: right;
+}
 .engage .apply.card {
     width: 45vw;
     height: calc(40vh - 8px);
@@ -511,6 +614,13 @@ h1#subtitle-bottom {
     border-radius: 5px;
     background-color: black;
     color: #F5F4F1;
+}
+.engage:hover .apply-background {
+    background-position: left;
+}
+.engage:hover .get-involved.card {
+    background-position: bottom left;
+    color: rgba(0, 0, 0, 0.68);
 }
 /* #endregion */
 
@@ -521,12 +631,10 @@ h1#subtitle-bottom {
     text-align: left;
     background-color: #ededed;
 }
-
 .team-text {
     padding-left: 10vw;
     padding-right: 10vw;
 }
-
 .subsection-title-text {
     padding-left: 10vw; /* REDUNDANT */
     padding-right: 10vw;
@@ -541,7 +649,6 @@ h1#subtitle-bottom {
     font-size: 32px;
     line-height: 32px;
 }
-
 .scroll-through {
     min-width: 100%;
     gap: 50px;
@@ -557,11 +664,9 @@ h1#subtitle-bottom {
     display: flex;
     justify-content: space-between;
 }
-
 .senior-advisors .scroll-through {
     flex-direction: row-reverse;
 }
-
 .team .card {
     width: 15vw;
     height: 15vw;
@@ -570,22 +675,21 @@ h1#subtitle-bottom {
     border-radius: 6px;
 
     font-family: 'Proxima Nova';
-}
 
+    transition: 0.5s ease;
+}
 .cypher-team .card { 
     border: 2px solid black;
     box-shadow: 5px 5px #00A6FC;
     background-color: white;
     color: black;
 }
-
 .senior-advisors .card {
     border: 2px solid white;
     box-shadow: 5px 5px #DD7CFF;
     background-color: black;
     color: white;
 }
-
 .team .card-body {
     display: flex;
     flex-direction: column;
@@ -593,17 +697,14 @@ h1#subtitle-bottom {
 
     text-align: left;
 }
-
 .team .card-title {
     font-size: 18px;
     font-weight: 700;
 }
-
 .team .card-subtitle {
     font-size: 13px;
     font-weight: lighter;
 }
-
 .team .card-img {
     height: 8vh;
     width: 8vh;
@@ -612,34 +713,27 @@ h1#subtitle-bottom {
     border: solid 3px #F3F4F5;
     border-radius: 50%;
 }
-
 .card-icons {
     display: flex;
     justify-content: space-evenly;
     
     margin-top: auto;
 }
-
 .cypher-team .card-subtitle {
     color:rgba(0, 0, 0, 0.8);
 }
-
 .senior-advisors .card-subtitle {
     color:rgba(256, 256, 256, 0.8);
 }
-
 .cypher-team .card-img {
     border: solid 3px rgba(34, 34, 34, 0.66);
 }
-
 .scroll-cushion {
     height: 20px;
 }
-
 #jeff_amico {
     margin-right: 5px;
 }
-
 #catrina_wang {
     margin-right: 5px;
 }
@@ -652,7 +746,6 @@ h1#subtitle-bottom {
     
     background: #222222;
 }
-
 .partners .subsection-title-text {
     margin-bottom: 25px;
     
@@ -663,21 +756,17 @@ h1#subtitle-bottom {
     
     text-align: center;
 }
-
 .partner-logo {
     opacity: 0.5;
     height: 50px;
 }
-
 .partner-logo:hover {
     opacity: 1;
 }
-
 .partners > div > div:nth-child(1) {
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
-
 .partners > div > div:nth-child(2) {
     padding-top: 2.5%;
 }
@@ -690,15 +779,12 @@ h1#subtitle-bottom {
     background-color: black;
     color: white;
 }
-
 .footer > div > div:nth-child(2) > a {
     color: white;
 }
-
 .flex-child {
     width: 50%;
 }
-
 .flex-child.footer-left {
     text-align: left;
 }
@@ -706,7 +792,6 @@ h1#subtitle-bottom {
     text-align: right;
     align-self: center;
 }
-
 .footer-right > a:nth-child(4) {
     padding-right: 2.5%;
 }

@@ -1,8 +1,5 @@
 import { React } from 'react';
 import { FaTwitterSquare, FaLinkedin } from 'react-icons/fa'
-import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
-
 
 function Footer() {
   return (

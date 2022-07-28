@@ -1,8 +1,6 @@
-import Card from 'react-bootstrap/Card';
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 import { FaTwitter, FaLinkedinIn} from 'react-icons/fa'
-import "bootstrap/dist/css/bootstrap.min.css";
-import './Component.css';
 
 function Member(props) {
     const name = props.name;
@@ -30,7 +28,7 @@ function Member(props) {
                 </Card.Body>
             </Card>
             <div>
-                <div class="scroll-cushion"></div>
+                <div className="scroll-cushion"></div>
             </div>
         </div>
         
