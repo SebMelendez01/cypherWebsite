@@ -1,8 +1,11 @@
 
 import mapInfo from '../assets/map.json';
 import {MyVerticallyCenteredModal} from './Company'
-import './Component.css';
+import { motion } from "framer-motion"
+
 import React, {useState} from "react";
+import './Component.css';
+
 
 
 function LocationModal(props) {
@@ -18,8 +21,8 @@ function LocationModal(props) {
   return (
        <svg>
         <g onClick={() => setModalShow(true)}>
-          <circle fill="#000" cx={location.x} cy={location.y} r={props.bsize}/>
-          <circle fill="#00A6FC" cx={location.x} cy={location.y} r={props.size}/>
+            <circle className='back' fill="#000" cx={location.x} cy={location.y} r={props.bsize}/>
+            <circle className='front' fill="#00A6FC" cx={location.x} cy={location.y} r={props.size}/>
         </g>
         <MyVerticallyCenteredModal
           show={modalShow}

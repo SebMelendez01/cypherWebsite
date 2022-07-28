@@ -14,6 +14,43 @@ import quotes from '../assets/quotes.json'
 
 function Cohort() {
   const [counter, setCounter] = useState(0);
+  function animate({timing, draw, duration}) {
+
+    let start = performance.now();
+  
+    requestAnimationFrame(function animate(time) {
+      // timeFraction goes from 0 to 1
+      let timeFraction = (time - start) / duration;
+      if (timeFraction > 1) timeFraction = 1;
+  
+      // calculate the current animation state
+      let progress = timing(timeFraction);
+  
+      draw(progress); // draw it
+  
+      if (timeFraction < 1) {
+        requestAnimationFrame(animate);
+      }
+  
+    });
+  }
+  function makeEaseOut(timing) {
+    return function(timeFraction) {
+      return 1 - timing(1 - timeFraction);
+    }
+  }
+
+  function bounce(timeFraction) {
+    for (let a = 0, b = 1; 1; a += b, b /= 2) {
+      if (timeFraction >= (7 - 4 * a) / 11) {
+        return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+      }
+    }
+  }
+
+  let bounceEaseOut = makeEaseOut(bounce);
+  
+
   useEffect(() => {
     const interval = setInterval(() => {
       if(counter >= quotes.length - 1) {
@@ -21,31 +58,44 @@ function Cohort() {
       } else {
         setCounter(counter => counter + 1);
       }
+      let card = document.getElementById('quote');
+      card.style.zIndex = "100";
+      animate({
+        duration: 3000,
+        timing: bounceEaseOut,
+        draw: function(progress) {
+          card.style.top = progress * (50) - 50+ 'px';
+        }
+      });
       
     }, 5000);
     return () => clearInterval(interval);
-  }, [counter]);
+  }, [bounceEaseOut, counter]);
 
-
+  const companyQuotes = quotes.map((quote, index) =>
+    <Card id='quote'>
+      <Card.Body id='quote-body'>
+        <div className='flex-container'>
+          <div className='flex-child' id='card-left'>
+            <Image src={quote.image} roundedCircle/>
+          </div>
+          <div className='flex-child' id='card-right'>
+            <Card.Title><b>{quote.name}</b></Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{quote.title}</Card.Subtitle>
+          </div>
+        </div>
+        <Card.Text id='quote-text'>{quote.quote}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
   return (
     <div className="cohort" id="cohort">
       <div className='flex-container'>
         <div className='flex-child' id='quote-card'>
           <div className='background-box'></div>
-          <Card>
-            <Card.Body id='quote-body'>
-              <div className='flex-container'>
-                <div className='flex-child' id='card-left'>
-                  <Image src={quotes[counter].image} roundedCircle/>
-                </div>
-                <div className='flex-child' id='card-right'>
-                  <Card.Title><b>{quotes[counter].name}</b></Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">{quotes[counter].title}</Card.Subtitle>
-                </div>
-              </div>
-              <Card.Text id='quote-text'>{quotes[counter].quote}</Card.Text>
-            </Card.Body>
-          </Card>
+          {companyQuotes[counter]}
+          {companyQuotes[counter]}
+          
         </div>
         <div className='flex-child' id='intro-right'>
           <div className="title">

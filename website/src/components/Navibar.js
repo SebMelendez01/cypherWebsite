@@ -48,7 +48,7 @@ function Navibar() {
                 <Nav.Link>Team</Nav.Link>
                 <Nav.Link>News</Nav.Link>
                 <Nav.Link>Get Involved</Nav.Link>
-                <a href='https://www.f6s.com/cypher-accelerator-cohort-2022/' target="_blank" rel="noopener noreferrer"><button class="gradient-button">Apply</button></a>
+                <a href='https://www.f6s.com/cypher-accelerator-cohort-2022/' target="_blank" rel="noopener noreferrer"><button className="gradient-button">Apply</button></a>
             </Nav>     
         </Navbar>
     );
