@@ -58,6 +58,21 @@ function Cohort() {
       }
     }
   };
+  const cohortVariants = {
+    offscreen: {
+      opacity: 0, 
+      scale: 2
+    },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  };
 
   // console.log("asdf");
   
@@ -115,7 +130,7 @@ function Cohort() {
             className="card-container"
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <motion.div className="card" style={{border: 0}} variants={titleVariants}>
               <div className="title">
@@ -131,36 +146,45 @@ function Cohort() {
         </div>
       </div>
       {/* https://react-bootstrap.github.io/layout/grid/ */}
-      <Container>
-        <div className='cohort-grid'>
-          <Row style={{width: "51%"}} >
-            <Col>
-              <Company name='Cowboy Labs'/>
-            </Col>
-            <Col>
-              <Company name='Protego'/>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Company name='Roofstock'/>
-              <Company name='Carv'/>
-            </Col>
-            <Col>
-              <Company name='VO2'/>
-              <Company name='Ensuro'/>
-            </Col>
-            <Col>
-              <Company name='VIA'/>
-              <Company name='TYDEi'/>
-            </Col>
-            <Col>
-              <Company name='Portabl'/>
-              <Company name='Metaverse AI'/>
-            </Col>
-          </Row>
-        </div>
-      </Container>
+      <motion.div
+        className="card-container"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.div className="card" style={{border: 0}} variants={cohortVariants}>
+          <Container>
+            <div className='cohort-grid'>
+              <Row style={{width: "51%"}} >
+                <Col>
+                  <Company name='Cowboy Labs'/>
+                </Col>
+                <Col>
+                  <Company name='Protego'/>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Company name='Roofstock'/>
+                  <Company name='Carv'/>
+                </Col>
+                <Col>
+                  <Company name='VO2'/>
+                  <Company name='Ensuro'/>
+                </Col>
+                <Col>
+                  <Company name='VIA'/>
+                  <Company name='TYDEi'/>
+                </Col>
+                <Col>
+                  <Company name='Portabl'/>
+                  <Company name='Metaverse AI'/>
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

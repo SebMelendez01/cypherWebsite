@@ -1,3 +1,5 @@
+/* https://uigradients.com/#DayTripper  See Gradients here*/
+
 /* #region General Rules */
 body {
     font-family: 'Metropolis';
@@ -8,16 +10,33 @@ body {
 .section-title-text {
     font-size: 75px;
     line-height: 90px;
-    font-weight: 700;
+    font-weight: 600;
     color: black;
 }
 .section-subtitle-text {
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 24px;
     color: rgba(34, 34, 34, 0.66);
 }
+
+/* border radius for popup modal in company.js currently 5px*/
+:root {
+    --button-radius: 0px;
+    --card-radius: 0px;
+    --quote-radius: 0px;
+    --company-card-radius: 0px;
+    --company-img-radius: 0px;
+    --popup-img-radius: 0px;
+    --engage-radius: 0px;
+    --engage-apply-radius: 0px;
+    --team-radius: 0px;
+
+    --cypher-color-1: #00A6FC;
+    --cypher-color-2: #DD7CFF;
+}
+
 /* #endregion */
 
 /* ––––––––––––––– */
@@ -31,10 +50,10 @@ body {
     border-right: 10vw solid #ededed;
 }
 .cypher-team .scroll-through::-webkit-scrollbar-thumb {
-    background-color: #00A6FC;
+    background-color: var(--cypher-color-1);
 }
 .senior-advisors .scroll-through::-webkit-scrollbar-thumb {
-    background: #DD7CFF;
+    background: var(--cypher-color-2);
 }
 .cypher-team .scroll-through::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 186, 252, 0.75);
@@ -59,7 +78,7 @@ button {
     overflow: hidden;
     
     background-color: black;
-    border-radius: 6px;
+    border-radius: var(--button-radius);
     
     color: white;
     font-size: 18px;
@@ -76,7 +95,7 @@ button {
     
     background: #FFFFFF;
     border: 3px solid #000000;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     box-shadow: 5px 5px var(--box-shadow-color);
     
     font-size: 20px;
@@ -88,8 +107,8 @@ button {
 .hero .gradient-button {
     height: 45px;
     
-    background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%) no-repeat, white;
-    border-radius: 6px;
+    background: linear-gradient(265.64deg, var(--cypher-color-2) 0%, var(--cypher-color-1) 100%) no-repeat, white;
+    border-radius: var(--button-radius);
     
     color: black;
     font-size: 18px;
@@ -104,8 +123,8 @@ button {
 
     font-size: 18px;
     
-    background: linear-gradient(265.64deg, #DD7CFF 0%, #00A6FC 100%);
-    border-radius: 6px;
+    background: linear-gradient(265.64deg, var(--cypher-color-2) 0%, var(--cypher-color-1) 100%);
+    border-radius: var(--button-radius);
 
     font-family: "Metropolis";
 }
@@ -118,7 +137,7 @@ button {
     
     background-image: linear-gradient(to right, #1b6e9b 1.29%, #87599b 50%, white 50%, white 100%);
     border: 3px solid #000000;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     box-shadow: 5px 5px black;
 
     color: black;
@@ -146,7 +165,7 @@ button {
     color: white;
 }
 .engage:hover .white-button {
-    --box-shadow-color: #00A6FC;
+    --box-shadow-color: var(--cypher-color-1);
 }
 
 /* #endregion */
@@ -157,17 +176,28 @@ button {
 
 .marquee-section {
     width: 100%;
-    height: 25px;
-    font-size: 10;
-    background-color: #00A6FC;
+    height: 35px;
+    background-color: black;
     position: fixed;
-    top: 0;
-    z-index: 9999;
+    z-index: 6000;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(270deg, var(--cypher-color-1) 40%, var(--cypher-color-2) 60%) 1;
 }
 
-.marquee-section > marquee > span {
-    font-size: 15px;
-    font-weight: 900;
+.marquee {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.marquee-section .marquee .group {
+    padding-left: 50px;
+    background: linear-gradient(270deg, var(--cypher-color-1) 40%, var(--cypher-color-2) 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.marquee > * > span {
+    font-weight: 700;
 }
 
 .navbar#navbar {
@@ -177,15 +207,15 @@ button {
 
     z-index: 5000;
     position: fixed;
-    top: 25px;
+    margin-top: 35px;
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     padding-right: 5vw;
     padding-left: 5vw;
     
     font-family: 'Proxima Nova';
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 
     transition: all 0.5s;
 }
@@ -235,10 +265,10 @@ button {
     text-align: right;
 }
 .hero-description {
-    font-size: 25px;
+    font-size: 20px;
     color: #E8E8E8;
     line-height: 35px;
-    font-weight: 500;
+    font-weight: 450;
     
 }
 .hero-logos {
@@ -289,7 +319,7 @@ button {
     flex-direction: column;
     padding: 4px;
     border: 1px solid #000000;
-    border-radius: 6px;
+    border-radius: var(--card-radius);
     line-height: 24px;
     text-align: center;
     
@@ -301,7 +331,7 @@ button {
 }
 .bcf-flip-card-front {
     box-shadow: 5px 5px black;
-    background: linear-gradient(210.95deg, #DD7CFF 27.79%, #00A6FC 100%);
+    background: linear-gradient(210.95deg, var(--cypher-color-2) 27.79%, var(--cypher-color-1) 100%);
     color: #FFFFFF;
 }
 .bcf-flip-card-container:hover .bcf-flip-card-positioner {
@@ -329,7 +359,7 @@ button {
     font-size: 24px;
 }
 .bcf-flip-card-back .card-title {
-    background: linear-gradient(270deg, #00A6FC 40%, #DD7CFF 60%);
+    background: linear-gradient(270deg, var(--cypher-color-1) 40%, var(--cypher-color-2) 60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -461,8 +491,8 @@ h1#subtitle-bottom {
     width: 100%;
     margin-left: 10px;
     margin-top: 10px;
-    border-radius: 6px;
-    background: linear-gradient(71.24deg, #00A6FC 0%, #DD7CFF 98.86%);;
+    border-radius: var(--quote-radius);
+    background: linear-gradient(71.24deg, var(--cypher-color-1) 0%, var(--cypher-color-2) 98.86%);;
     z-index: 1;
 }
 
@@ -481,14 +511,12 @@ h1#subtitle-bottom {
 }
 
 #quote {
+    border-radius: var(--quote-radius);
     transition: transform 0.5s;
     display: inline-block;
     text-align: center;
 }
 
-.out {
-    transform: scale(0);
-  }
 
 /* Map */
 .map {
@@ -498,7 +526,7 @@ h1#subtitle-bottom {
 @keyframes frontTransition {
 from {
     r: 6;
-    fill: #00A6FC;
+    fill: var(--cypher-color-1);
 }
 to {
     r: 10;
@@ -527,6 +555,7 @@ to {
     width: 255px;
     height: auto;
     outline: 2px solid black;
+    border-radius: var(--company-card-radius);
     box-shadow: 5px 5px;
 }
 .company-card:hover {
@@ -538,7 +567,7 @@ to {
 .flex-child#company-logo > img{
     width:65px;
     background-color: black;
-    border-radius: 5px;
+    border-radius: var(--company-img-radius);
 }
 #company-info {
     margin-left: 10px;
@@ -582,6 +611,7 @@ body > div.fade.modal.show > div > div {
     background-color: transparent;
     border: transparent;
 }
+
 .flex-child#popup-modal {
     width: 60%;
 }
@@ -598,7 +628,7 @@ body > div.fade.modal.show > div > div {
 .flex-child#popup-img > img{
     width: 90%;
     margin: 5%;
-    border-radius: 5px;
+    border-radius: var(--popup-img-radius);
     background-color: black;
 }
 #popup-modal > div.modal-footer > a {
@@ -655,9 +685,9 @@ body > div.fade.modal.show > div > div {
     width: 25vw;
     height: 40vh;
     
-    background: linear-gradient(to top right, #00A6FC 0%, #DD7CFF 38%,  #DD7CFF 50%, #000000 50%, #000000 100%);
+    background: linear-gradient(to top right, var(--cypher-color-1) 0%, var(--cypher-color-2) 38%,  var(--cypher-color-2) 50%, #000000 50%, #000000 100%);
     border: 4px solid #000000;
-    border-radius: 9px;
+    border-radius: var(--engage-radius);
 
     transition: 1s;
     background-size: 200% 200%;
@@ -670,19 +700,19 @@ body > div.fade.modal.show > div > div {
     padding: 4px;
     height: 40vh;
 
-    border-radius: 9px;
+    border-radius: var(--engage-radius);
 
     transition: background-position 1s;
     background-size: 200% 200%;
     
-    background-image: linear-gradient(to right, #00A6FC 0%, #DD7CFF 38%,  #DD7CFF 50%, #000000 50%, #000000 100%);
+    background-image: linear-gradient(to right, var(--cypher-color-1) 0%, var(--cypher-color-2) 38%,  var(--cypher-color-2) 50%, #000000 50%, #000000 100%);
     background-position: right;
 }
 .engage .apply.card {
     width: 45vw;
     height: calc(40vh - 8px);
     
-    border-radius: 5px;
+    border-radius: var(--engage-apply-radius);
     background-color: black;
     color: #F5F4F1;
 }
@@ -710,7 +740,7 @@ body > div.fade.modal.show > div > div {
     padding-left: 10vw; /* REDUNDANT */
     padding-right: 10vw;
     
-    background: linear-gradient(270deg, #00A6FC 15%, #DD7CFF 25%);
+    background: linear-gradient(270deg, var(--cypher-color-1) 15%, var(--cypher-color-2) 25%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -743,7 +773,7 @@ body > div.fade.modal.show > div > div {
     height: 15vw;
     padding: 2%;
 
-    border-radius: 6px;
+    border-radius: var(--team-radius);
 
     font-family: 'Proxima Nova';
 
@@ -751,13 +781,13 @@ body > div.fade.modal.show > div > div {
 }
 .cypher-team .card { 
     border: 2px solid black;
-    box-shadow: 5px 5px #00A6FC;
+    box-shadow: 5px 5px var(--cypher-color-1);
     background-color: white;
     color: black;
 }
 .senior-advisors .card {
     border: 2px solid white;
-    box-shadow: 5px 5px #DD7CFF;
+    box-shadow: 5px 5px var(--cypher-color-2);
     background-color: black;
     color: white;
 }
@@ -820,7 +850,7 @@ body > div.fade.modal.show > div > div {
 .partners .subsection-title-text {
     margin-bottom: 25px;
     
-    background: linear-gradient(270deg, #00A6FC 40%, #DD7CFF 60%);
+    background: linear-gradient(270deg, var(--cypher-color-1) 40%, var(--cypher-color-2) 60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -828,12 +858,9 @@ body > div.fade.modal.show > div > div {
     text-align: center;
 }
 .partner-logo {
-    opacity: 0.5;
     height: 50px;
 }
-.partner-logo:hover {
-    opacity: 1;
-}
+
 .partners > div > div:nth-child(1) {
     padding-top: 2.5%;
     padding-bottom: 2.5%;
@@ -852,6 +879,10 @@ body > div.fade.modal.show > div > div {
 }
 .footer > div > div:nth-child(2) > a {
     color: white;
+}
+.footer > * {
+    font-size: 10px;
+    font-weight: 500;
 }
 .flex-child {
     width: 50%;

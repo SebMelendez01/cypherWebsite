@@ -13,14 +13,11 @@ export function MyVerticallyCenteredModal(props) {
   const data = cohort;
   const style = {
     border: '2px solid black',
-    borderRadius : '4px',
+    borderRadius : '5px',
     background: 'white'
   };  
   const stackStyle = {
     backgroundColor: 'transparent'
-  };  
-  const modalStyle = {
-    // color: 'green'
   };  
 
   const companies = props.companyarray.map((company, index) => {
@@ -29,7 +26,7 @@ export function MyVerticallyCenteredModal(props) {
         {tag}
       </Badge>
     );
-      return <div className='flex-container' style={style} key={company}>
+      return <div className='flex-container' style={style} key={company} id='modal'>
         <div className='flex-child' id='popup-img'>
           <span className="helper"></span>
           <img src={require(`../assets/images/companies/${cohort[company].logo}.png`)} alt=''/>
@@ -58,7 +55,6 @@ export function MyVerticallyCenteredModal(props) {
       size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      style={modalStyle}
     >
       <Stack direction="vertical" gap={3} style={stackStyle}>
         {companies}

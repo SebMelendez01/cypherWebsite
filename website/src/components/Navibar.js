@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import Marquee from "react-fast-marquee";
+import Stack from 'react-bootstrap/Stack';
+
 
 import { debounce } from "../utilities/helpers.js"
 import cypherNavbarLogo from '../assets/images/logos/cypher-logo-white.png'
@@ -39,7 +42,7 @@ function Navibar() {
         changeViewableStatus();
     });
 
-      
+  //Timer: https://www.digitalocean.com/community/tutorials/react-countdown-timer-react-hooks
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
 
@@ -52,7 +55,7 @@ function Navibar() {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        // seconds: Math.floor((difference / 1000) % 60)
     };
     }
 
@@ -72,7 +75,7 @@ function Navibar() {
   const timerComponents = [];
     timerComponents.push(
       <span>
-          {'Application opens on Sept 1st.'} {" "}
+          {'Application opens on Sept 1st!'} {" "}
       </span>
     );
   Object.keys(timeLeft).forEach((interval) => {
@@ -91,7 +94,14 @@ function Navibar() {
   return (
     <div>
       <div className='marquee-section'>
-          <marquee>{timerComponents.length ? timerComponents : <span>Time's up!</span>}</marquee>
+        <Marquee gradient={false}>
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+        </Marquee>
       </div>
       <Navbar className={colorState ? "navbar moving" : "navbar clear"} id="navbar">
         <Navbar.Brand>
