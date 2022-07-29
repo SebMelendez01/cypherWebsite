@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
@@ -8,6 +8,7 @@ import cypherNavbarLogo from '../assets/images/logos/cypher-logo-white.png'
 function Navibar() {
     const [colorState, setColorState] = useState(false);
     const [scrollState, setScrollState] = useState(0);
+
 
     var relevantHeight;
     var currentScrollPos;
@@ -38,19 +39,73 @@ function Navibar() {
         changeViewableStatus();
     });
 
-    return (
-        <Navbar className={colorState ? "navbar moving" : "navbar clear"} id="navbar">
-            <Navbar.Brand>
-                <img src={cypherNavbarLogo} height="50vh"/>
-            </Navbar.Brand>
-            <Nav className="navbar-links-and-buttons">
-                <Nav.Link>Team</Nav.Link>
-                <Nav.Link>News</Nav.Link>
-                <Nav.Link href="https://forms.gle/LuNA86cb6jL7gCbQ9" target="_blank" rel="noopener noreferrer">Get Involved</Nav.Link>
-                <a href='https://www.f6s.com/cypher-accelerator-cohort-2022/' target="_blank" rel="noopener noreferrer"><button className="gradient-button">Apply</button></a>
-            </Nav>     
-        </Navbar>
+      
+  const calculateTimeLeft = () => {
+    let year = new Date().getFullYear();
+
+    let difference = +new Date(`9/01/${year}`) - +new Date();
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+    timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+    };
+    }
+
+    return timeLeft;
+  }
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  
+    return () => clearTimeout(timer);
+  });
+
+  const timerComponents = [];
+    timerComponents.push(
+      <span>
+          {'Application opens on Sept 1st.'} {" "}
+      </span>
     );
+  Object.keys(timeLeft).forEach((interval) => {
+    if (!timeLeft[interval]) {
+        return;
+    }
+        
+    timerComponents.push(
+      <span>
+        {timeLeft[interval]} {interval}{" "}
+      </span>
+    );
+  });
+
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee
+  return (
+    <div>
+      <div className='marquee-section'>
+          <marquee>{timerComponents.length ? timerComponents : <span>Time's up!</span>}</marquee>
+      </div>
+      <Navbar className={colorState ? "navbar moving" : "navbar clear"} id="navbar">
+        <Navbar.Brand>
+          <img src={cypherNavbarLogo} height="50vh"/>
+        </Navbar.Brand>
+        <Nav className="navbar-links-and-buttons">
+          <Nav.Link>Team</Nav.Link>
+          <Nav.Link>News</Nav.Link>
+          <Nav.Link href="https://forms.gle/LuNA86cb6jL7gCbQ9" target="_blank" rel="noopener noreferrer">Get Involved</Nav.Link>
+          <a href='https://www.f6s.com/cypher-accelerator-cohort-2022/' target="_blank" rel="noopener noreferrer"><button className="gradient-button">Apply</button></a>
+        </Nav>     
+      </Navbar>
+    </div>
+  );
 }
 
 export default Navibar;

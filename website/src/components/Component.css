@@ -8,7 +8,7 @@ body {
 .section-title-text {
     font-size: 75px;
     line-height: 90px;
-    font-weight: 550;
+    font-weight: 700;
     color: black;
 }
 .section-subtitle-text {
@@ -154,14 +154,30 @@ button {
 /* ––––––––––––––– */
 
 /* #region Navigation Bar Section */
+
+.marquee-section {
+    width: 100%;
+    height: 25px;
+    font-size: 10;
+    background-color: #00A6FC;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.marquee-section > marquee > span {
+    font-size: 15px;
+    font-weight: 900;
+}
+
 .navbar#navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    z-index: 9999;
+    z-index: 5000;
     position: fixed;
-    top: 0;
+    top: 25px;
     width: 100%;
     height: 10vh;
     padding-right: 5vw;
@@ -433,7 +449,14 @@ h1#subtitle-bottom {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
+
+.animation-helper {
+    height: 100%;
+    position: relative;
+}
+
 .background-box {
+    position: absolute;
     height: 50%;
     width: 100%;
     margin-left: 10px;
@@ -442,8 +465,10 @@ h1#subtitle-bottom {
     background: linear-gradient(71.24deg, #00A6FC 0%, #DD7CFF 98.86%);;
     z-index: 1;
 }
-#quote-card > .card {
+
+#quote-card > div > div> .card {
     height: 50%;
+    width: 100%;
     outline: 2px solid black;
     z-index: 2;
 }
@@ -454,6 +479,18 @@ h1#subtitle-bottom {
 .flex-child#card-left > img{
     width: 7vw;
 }
+
+#quote {
+    transition: transform 0.5s;
+    display: inline-block;
+    text-align: center;
+}
+
+.out {
+    transform: scale(0);
+  }
+
+/* Map */
 .map {
     text-align: center;
 }
@@ -520,7 +557,7 @@ to {
     font-size: 16.5px; /* Card should not resize*/
 }
 
-#test {
+#card-info {
     width: 150px;
 }
 

@@ -91,7 +91,7 @@ export function Company(props) {
             </div>
             <div className='flex-child' id='company-info'>
               <Card.Title><b>{name}</b></Card.Title>
-              <div className='flex-container' id='test'>
+              <div className='flex-container' id='card-info'>
                 <div className='flex-child' id='tags'>
                   {tags}     
                 </div>

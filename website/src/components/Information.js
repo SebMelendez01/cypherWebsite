@@ -1,9 +1,24 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
+import { motion } from "framer-motion";
+
 
 function Information() {
-    document.querySelectorAll(".bcf-flip-card-positioner").forEach(item => {
+    const titleVariants = {
+        offscreen: {
+          x: -800
+        },
+        onscreen: {
+          x: 0,
+          transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 1
+          }
+        }
+      };
+     document.querySelectorAll(".bcf-flip-card-positioner").forEach(item => {
         item.addEventListener('mouseout', () => {
             item.classList.add("was-hovered-container")
         });
@@ -14,11 +29,21 @@ function Information() {
             item.classList.add("was-hovered-card-front")
         });
     })
+
     
     return (
         <div className="information">
-            <div className="section-subtitle-text">WE USE OUR RESOURCES TO SUPPORT YOU.</div>
-            <div className="section-title-text">Learn How We<br/>Can Help.</div>
+            <motion.div
+                className="card-container"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+            >
+                <motion.div style={{border: 0}} variants={titleVariants}>
+                    <div className="section-subtitle-text">WE USE OUR RESOURCES TO SUPPORT YOU.</div>
+                    <div className="section-title-text">Learn How We<br/>Can Help.</div>
+                </motion.div>
+            </motion.div>
             <div className="bcf-cards-container">
                 <div className="bcf-flip-card-container">
                     <div className="bcf-flip-card-positioner">
