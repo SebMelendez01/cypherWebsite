@@ -6,15 +6,22 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
+import Stack from 'react-bootstrap/Stack'
+
+
+import { useMediaQuery } from 'react-responsive'
 import { motion } from "framer-motion";
-
-
 
 import quotes from '../assets/quotes.json'
 
 function Cohort() {
   const [counter, setCounter] = useState(0);
   const cardRef = useRef();
+
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1400px)' })
+  const isTablet = useMediaQuery({ query: '(min-width: 1400px)' });
+  const isPhone = useMediaQuery({ query: '(min-width: 1400px)' });
+
   let companyQuotes = quotes.map((quote) =>
     <Card.Body id='quote-body'>
       <div className='flex-container'>
@@ -29,6 +36,7 @@ function Cohort() {
       <Card.Text id='quote-text'>{quote.quote}</Card.Text>
     </Card.Body>
   );
+
   const [cardData, setCardData] = useState(companyQuotes[0]);
 
   const cardVariants = {
@@ -92,7 +100,7 @@ function Cohort() {
         setCounter(counter => counter + 1);
       }
       next();
-      console.log("hello");
+      // console.log($(window).width());
     }, 4000);
     return () => clearInterval(interval);
   }, [companyQuotes, counter]);
@@ -100,8 +108,8 @@ function Cohort() {
   
 
   return (
-    <div className="cohort" id="cohort">
-      <div className='flex-container'>
+    <div className="cohort" >
+      <div className='flex-container' id="cohort" >
         <div className='flex-child' id='quote-card'>
           <motion.div
             className="animation-div"
@@ -135,7 +143,7 @@ function Cohort() {
             <motion.div className="card" style={{border: 0}} variants={titleVariants}>
               <div className="title">
                 <div className="section-subtitle-text">WE ACCEPT COMPANIES FROM ALL OVER THE WORLD.</div>
-                <div className="section-title-text">Meet Our Genesis <br/> Cohort.</div>
+                <div className="section-title-text">Meet Our Genesis<br/>Cohort.</div>
               </div>
             </motion.div>
           </motion.div>
@@ -153,7 +161,7 @@ function Cohort() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div className="card" style={{border: 0}} variants={cohortVariants}>
-          <Container>
+          {isDesktopOrLaptop && <Container>
             <div className='cohort-grid'>
               <Row style={{width: "51%"}} >
                 <Col>
@@ -182,7 +190,29 @@ function Cohort() {
                 </Col>
               </Row>
             </div>
-          </Container>
+          </Container>}
+          {!isDesktopOrLaptop && <div className="scroll-through" id="company-cards">
+            <Stack gap={2}>
+              <Company name='Cowboy Labs'/>
+              <Company name='Protego'/>
+            </Stack>
+            <Stack gap={2}>
+              <Company name='Roofstock'/>
+              <Company name='Carv'/>
+            </Stack>
+            <Stack gap={2}>
+              <Company name='VO2'/>
+              <Company name='Ensuro'/>
+            </Stack>
+            <Stack gap={2}>
+              <Company name='VIA'/>
+              <Company name='TYDEi'/>
+            </Stack>
+            <Stack gap={2}>
+              <Company name='Portabl'/>
+              <Company name='Metaverse AI'/>
+            </Stack>
+          </div>}
         </motion.div>
       </motion.div>
     </div>

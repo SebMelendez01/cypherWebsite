@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Marquee from "react-fast-marquee";
-import Stack from 'react-bootstrap/Stack';
 
 
 import { debounce } from "../utilities/helpers.js"
 import cypherNavbarLogo from '../assets/images/logos/cypher-logo-white.png'
 
+// https://react-bootstrap.github.io/components/navbar/ Create a responsive navBar
 function Navibar() {
     const [colorState, setColorState] = useState(false);
     const [scrollState, setScrollState] = useState(0);
@@ -53,8 +53,8 @@ function Navibar() {
     if (difference > 0) {
     timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
+        // hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        // minutes: Math.floor((difference / 1000 / 60) % 60),
         // seconds: Math.floor((difference / 1000) % 60)
     };
     }
@@ -95,6 +95,8 @@ function Navibar() {
     <div>
       <div className='marquee-section'>
         <Marquee gradient={false}>
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
+            {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
             {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
             {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}
             {timerComponents.length - 1 ? <span className='group'>{timerComponents}</span> : <span className='group'>Time's up!</span>}

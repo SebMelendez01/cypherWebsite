@@ -7,7 +7,9 @@ body {
 .container {
 
 }
+
 .section-title-text {
+    
     font-size: 75px;
     line-height: 90px;
     font-weight: 600;
@@ -60,6 +62,19 @@ body {
 }
 .senior-advisors .scroll-through::-webkit-scrollbar-thumb:hover {
     background-color: rgba(221, 124, 255, 0.75);
+}
+
+.card .scroll-through::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(221, 124, 255, 0.75);
+}
+
+.card .scroll-through::-webkit-scrollbar-thumb {
+    background: var(--cypher-color-2);
+}
+
+.card .scroll-through::-webkit-scrollbar-thumb {
+    border-left: 0vw solid #ededed;
+    border-right: 0vw solid #ededed;
 }
 /* #endregion */
 
@@ -460,7 +475,7 @@ button {
     width: 100%
 }
 .cohort {
-    margin: 5%;
+    padding: 10vw;
 }
 .card-body#quote-body {
     margin-right: 10%;
@@ -535,7 +550,6 @@ h1#subtitle-bottom {
     display: inline-block;
     text-align: center;
 }
-
 
 /* Map */
 .map {
@@ -745,7 +759,7 @@ body > div.fade.modal.show > div > div {
     padding-left: 10vw;
     padding-right: 10vw;
 }
-.subsection-title-text {
+.team .subsection-title-text {
     padding-right: 10vw;
     
     background-size: 150vw 100%;
@@ -761,6 +775,7 @@ body > div.fade.modal.show > div > div {
 
     transition: ease 2s 1s;
 }
+
 .scroll-through {
     min-width: 100%;
     gap: 50px;
@@ -860,7 +875,8 @@ body > div.fade.modal.show > div > div {
 }
 .partners .subsection-title-text {
     margin-bottom: 25px;
-    
+    font-weight: 700;
+    font-size: 32px;
     background: linear-gradient(270deg, var(--cypher-color-1) 40%, var(--cypher-color-2) 60%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -879,6 +895,8 @@ body > div.fade.modal.show > div > div {
 .partners > div > div:nth-child(2) {
     padding-top: 2.5%;
 }
+
+
 /* #endregion */
 
 /* #region Footer Section */
@@ -909,3 +927,119 @@ body > div.fade.modal.show > div > div {
     padding-right: 2.5%;
 }
 /* #endregion */
+
+
+@media screen and (max-width: 1399px) {
+    .section-title-text {
+        font-size: 8vw;
+        line-height: normal !important; 
+    }
+    .section-subtitle-text {
+        font-size: 2vw;
+        line-height: normal !important;
+        padding-bottom: 5px;
+
+    }
+
+    .bcf-cards-container {
+        padding-bottom: 10vh;
+    }
+
+    .cohort {
+        padding-top: 0;
+    }
+
+    .cohort .flex-container#cohort{
+        flex-direction: column;
+    }
+    #quote-card {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+ 
+    #intro-right.flex-child {
+        width: 100%;
+        margin-right: auto;
+    }
+    .background-box, #quote-card > div > div> .card {
+        height: 190px;
+        width: 300px;
+    }
+    .card-text#quote-text {
+        margin-top: 5%;
+        font-size: 15px;
+    }
+    .flex-child#card-left > img{
+        width: 60px;
+    }
+    .flex-child#card-right > .card-title {
+        font-size: 13px;
+    }
+
+    .flex-child#card-right > .card-subtitle {
+        font-size: 11px;
+    }
+
+    .scroll-through#company-cards {
+        gap: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+    .scroll-through .vstack {
+        padding-bottom: 15px;
+    }
+
+    .map {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .partner-logo {
+        height: 4vw;
+    }
+
+    .partners .subsection-title-text {
+        font-size: 3vw;
+        margin-bottom: 0;
+    }
+
+    .partners > div > div:nth-child(1) {
+        padding-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    div.flex-child.footer-right > a:nth-child(-n+4) {
+        display: none;
+    }
+
+    div.flex-child.footer-right {
+        color: transparent;
+    }
+    .footer {
+        padding-top: 15px;
+    }
+
+    .footer .footer-left > *{
+        font-size: 2vw;
+    }
+    .cohort {
+        padding-bottom: 0;
+    }
+    .cohort > div.card-container {
+        transform: scale(0.7);
+        position: relative;
+        top: -50px;
+    }
+    #quote-card {
+        transform: scale(0.7);
+    }
+}
